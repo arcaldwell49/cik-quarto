@@ -18,5 +18,9 @@ $if(subtitle)$
 \makeatother
 \subtitle{$subtitle$}
 $endif$
-\author{${ by-author:_authors.tex()[\and ] }}
+$by-author:_authors.tex()[, ]$
+\\
+\bigskip
+$by-affiliation:_affiliations.tex()[\\ ]$
+\bigskip
 \date{$date$}

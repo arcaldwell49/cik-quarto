@@ -8,3 +8,9 @@ $-- Here we are using it to format the authors part of the template.
 $-- %%%%%%%%%%%%%%%
 
 $it.name.literal$$if(it.orcid)$~\orcidlink{$it.orcid$}$endif$$for(it.affiliations/first)$\\$it.name$$endfor$\\$if(it.email)$\href{mailto:$it.email$}{$it.email$}$endif$
+
+%\author{
+%$for(author)$
+%$author.name$$$^{$author.affiliation$}$$$sep$,
+%$endfor$
+%}

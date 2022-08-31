@@ -34,6 +34,7 @@ contributes:
         # Add here the partials your format is using
         - "partials/title.tex"
         - "partials/_authors.tex"
+        - "partials/before-body.tex"
       format-resources:
         # Add here the resources required for the PDF rendering
         - aft.cls

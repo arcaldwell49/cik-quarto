@@ -3,18 +3,72 @@ $--
 $-- %%%% TODO %%%%%
 $-- Customize is needed, otherwise remove this partials to use Quarto default one
 $-- %%%%%%%%%%%%%%%%
-$if(has-frontmatter)$
-\frontmatter
+\captionsetup[table]{labelformat=empty}
+\captionsetup[figure]{labelformat=empty}
+\raggedbottom
+
+%%%% Article title to be placed here
+\title{$title$}
+
+\address{
+$for(address)$
+  $$^{$address.code$}$$$address.address$$sep$\\
+$endfor$
+}
+%%%% Subject entries to be placed here %%%%
+\subject{
+$for(subject)$
+$subject$$sep$,
+$endfor$
+}
+
+%%%% Keyword entries to be placed here %%%%
+\keywords{
+$for(keywords)$
+$keywords$$sep$,
+$endfor$
+}
+
+%%%% Insert corresponding author and its email address}
+\corres{
+  $corresp_author_name$\\
+{\footnotesize $corresp_author_email$}
+}
+\inserttype{
+{\Large $article_type$}
+}
+
+\insertcite{
+  {$citation$}
+}
+
+$if(rise)$
+  \risenote{
+  { $risenote$}
+  }
 $endif$
-$if(title)$
-$if(beamer)$
-\frame{\titlepage}
-$else$
-\maketitle
-$endif$
-$if(abstract)$
+
+\editor{
+  $editor$
+}
+
+%%%% Abstract text to be placed here %%%%%%%%%%%%
 \begin{abstract}
 $abstract$
 \end{abstract}
-$endif$
-$endif$
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% Some pieces required from the pandoc template
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\providecommand{\EndFirstPage}{%
+}
+
+\definecolor{jobcolor}{cmyk}{0,0,0,.95}
+\definecolor{joblightcolor}{cmyk}{0,0,0,.95}
+\definecolor{abstractcolor}{RGB}{207, 250, 209}
+\definecolor{copyrightcolor}{RGB}{207, 250, 209}
+
+\maketitle
+
+\newpage

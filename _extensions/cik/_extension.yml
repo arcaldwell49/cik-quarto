@@ -32,8 +32,9 @@ contributes:
         \definecolor{mypink}{RGB}{219, 48, 122}
       template-partials:
         # Add here the partials your format is using
-        - "partials/title.tex"
-        - "partials/_authors.tex"
+        - "partials/doc-class.tex"
+        - "partials/before-body.tex"
+        - "partials/citations.tex"
       format-resources:
         # Add here the resources required for the PDF rendering
         - cik.cls
