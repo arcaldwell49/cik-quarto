@@ -1327,7 +1327,7 @@ at https://doi.org/\@doi\ or via http://\@jname.royalsocietypublishing.org.\par}
 \vspace*{-5.5pc}
 \noindent\begin{minipage}[!t]{50mm}
 \hskip-1pc
-\vbox to 242mm{{\vskip68pt\includegraphics[width=55mm,scale=0.6]{cik_logo.pdf}\vskip10pt
+\vbox to 242mm{ { \vskip68pt\includegraphics[width=55mm,scale=1]{cik_logo.pdf}\vskip10pt
 %{\fontfamily{\sfdefault}\fontseries{m}\fontshape{n}\fontsize{13.5}{15}\selectfont\raggedright 
 %\textcolor{jobcolor}{storkjournals.org}}\vskip10pt
 \if@citearticle@provided

@@ -48,30 +48,6 @@
 \fi
 
 
-\providecommand{\tightlist}{%
-  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}\usepackage{longtable,booktabs,array}
-\usepackage{calc} % for calculating minipage widths
-% Correct order of tables after \paragraph or \subparagraph
-\usepackage{etoolbox}
-\makeatletter
-\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
-\makeatother
-% Allow footnotes in longtable head/foot
-\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
-\makesavenoteenv{longtable}
-\usepackage{graphicx}
-\makeatletter
-\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
-\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
-\makeatother
-% Scale images if necessary, so that they will not overflow the page
-% margins by default, and it is still possible to overwrite the defaults
-% using explicit options in \includegraphics[width, height, ...]{}
-\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
-% Set default figure placement to htbp
-\makeatletter
-\def\fps@figure{htbp}
-\makeatother
 \newlength{\cslhangindent}
 \setlength{\cslhangindent}{1.5em}
 \newlength{\csllabelwidth}
@@ -171,7 +147,6 @@
 \urlstyle{same} % disable monospaced font for URLs
 \hypersetup{
   pdftitle={Some Title},
-  pdfauthor={Norah Jones; Jon H. Hamm},
   pdfkeywords={key1, key2, key3},
   colorlinks=true,
   linkcolor={blue},
@@ -180,9 +155,6 @@
   urlcolor={blue},
   pdfcreator={LaTeX via pandoc}}
 
-\title{Some Title}
-\author{Norah Jones \and Jon H. Hamm}
-\date{2022-08-31}
 
 \begin{document}
 \captionsetup[table]{labelformat=empty}
@@ -192,10 +164,17 @@
 %%%% Article title to be placed here
 \title{Some Title}
 
+\author{
+true$^{}$,
+true$^{}$}
+
 \address{
-}
+  $^{1}$Carnegie Mellon University\\
+  $^{2}$University of Chicago\\
+  $^{3}$University of California - San Diego}
 %%%% Subject entries to be placed here %%%%
 \subject{
+Another Science
 }
 
 %%%% Keyword entries to be placed here %%%%
@@ -206,20 +185,20 @@ key3}
 
 %%%% Insert corresponding author and its email address}
 \corres{
-  S. Name\\
-{\footnotesize s.name@fake.edu}
+  N. Jones\\
+{\footnotesize n.jones@fake.edu}
 }
 \inserttype{
 {\Large Research}
 }
 
 \insertcite{
-  {}
+  {10.51224/XXXXXXXXX}
 }
 
 
 \editor{
-  visual
+  Sam Somebody
 }
 
 %%%% Abstract text to be placed here %%%%%%%%%%%%
@@ -260,7 +239,7 @@ bibendum sodales, augue velit cursus nunc
 
 \maketitle
 
-\newpage\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[enhanced, borderline west={3pt}{0pt}{shadecolor}, breakable, frame hidden, interior hidden, sharp corners, boxrule=0pt]}{\end{tcolorbox}}\fi
+\newpage\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[interior hidden, sharp corners, borderline west={3pt}{0pt}{shadecolor}, boxrule=0pt, enhanced, frame hidden, breakable]}{\end{tcolorbox}}\fi
 
 \hypertarget{introduction}{%
 \section{Introduction}\label{introduction}}

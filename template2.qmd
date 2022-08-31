@@ -8,51 +8,53 @@ author:
     attributes:
       corresponding: true
     orcid: 0000-0003-1689-0557
-    email: njones@somewhere.org
     affiliations:
-      - ref: cmu
-      - ref: chicago
+      - ref: 1
+      - ref: 2
   - name: 
       given: Jon
       family: Hamm
       literal: Jon H. Hamm
     affiliations:
-      - ref: cmu
-      - ref: ucsd
+      - ref: 1
+      - ref: 3
 affiliations:
-  - id: cmu
+  - id: 1
     name: Carnegie Mellon University
     city: Pittsburgh
     state: PA
-  - id: chicago
+  - id: 2
     name: University of Chicago
     city: Chicago
     state: IL
-  - id: ucsd
+  - id: 3
     name: University of California - San Diego
     city: San Diego
     state: CA
-abstract: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc"
-format: 
-  cik-html: default
-  cik-pdf: 
-    cite-method: citeproc
-  jats: default
-bibliography: refs.json
-csl: apa7.csl
 doi: "10.51224/XXXXXXXXX"
 journal-editor: "Sam Somebody"
-link-citations: true
-always_allow_html: true
-corresp_author_name: S. Name
-corresp_author_email: "s.name@fake.edu"
+corresp_author_name: N. Jones
+corresp_author_email: "n.jones@fake.edu"
 article_type: Research
+notetf: false
+printnote: "Something to say here by the editors. Good for RISE editions."
 sci-subject:
   - Another Science
 keywords:
   - key1
   - key2
   - key3
+abstract: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc"
+format: 
+  cik-html: default
+  cik-pdf: 
+    cite-method: citeproc
+    keep-tex: true
+  jats: default
+bibliography: refs.json
+csl: apa7.csl
+link-citations: true
+always_allow_html: true
 pdf-engine: lualatex
 page-layout: article
 date: "`r Sys.Date()`"

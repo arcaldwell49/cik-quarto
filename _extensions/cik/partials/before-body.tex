@@ -10,16 +10,20 @@ $-- %%%%%%%%%%%%%%%%
 %%%% Article title to be placed here
 \title{$title$}
 
+\author{
+$for(author)$
+$author$$$^{$author.affiliations$}$$$sep$,
+$endfor$
+}
+
 \address{
-$for(address)$
-  $$^{$address.code$}$$$address.address$$sep$\\
+$for(affiliations)$
+  $$^{$affiliations.id$}$$$affiliations.name$$sep$\\
 $endfor$
 }
 %%%% Subject entries to be placed here %%%%
 \subject{
-$for(subject)$
-$subject$$sep$,
-$endfor$
+$sci-subject$
 }
 
 %%%% Keyword entries to be placed here %%%%
@@ -39,17 +43,17 @@ $endfor$
 }
 
 \insertcite{
-  {$citation$}
+  {$doi$}
 }
 
-$if(rise)$
+$if(notetf)$
   \risenote{
-  { $risenote$}
+  { $printnote$}
   }
 $endif$
 
 \editor{
-  $editor$
+  $journal-editor$
 }
 
 %%%% Abstract text to be placed here %%%%%%%%%%%%

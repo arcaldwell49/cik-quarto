@@ -19,13 +19,13 @@ contributes:
       documentclass: cik
       colorlinks: true
       urlcolor: blue
-      fig-width: 6.5
-      fig-height: 4.5
+      #fig-width: 6.5
+      #fig-height: 4.5
       # This format use a bst file with natbib
       #biblio-style: te
       cite-method: citeproc
       # Set this below (`biblio-config: false`) if your cls already load a bst file
-      #biblio-config: true
+      biblio-config: false
       # Content to add in header that your format is using
       header-includes: |
         \usepackage{orcidlink}
@@ -35,11 +35,16 @@ contributes:
         - "partials/doc-class.tex"
         - "partials/before-body.tex"
         - "partials/citations.tex"
+        - "partials/graphics.tex"
+        - "partials/tables.tex"
+        - "partials/tightlist.tex"
+        - "partials/title.tex"
       format-resources:
         # Add here the resources required for the PDF rendering
         - cik.cls
         - refs.json
       csl: https://www.zotero.org/styles/apa
+      keep_tex: true
     html:
       # define default configuration for the html version of your format
       number-sections: true
