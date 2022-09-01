@@ -57,29 +57,15 @@ link-citations: true
 always_allow_html: true
 pdf-engine: lualatex
 page-layout: article
-date: "`r Sys.Date()`"
+date: "2022-09-01"
 execute:
   keep-md: true
 editor: visual
 ---
 
-```{r setup, include=FALSE}
-# To COMPILE RUN THE CODE BELOW
-# rmarkdown::render(<your-rmd-file.rmd>, output_format ="all")
-library(knitr)
-library(tidyverse)
-library(kableExtra)
-## Global options
-#options(max.print="75")
-opts_chunk$set(echo=FALSE,
-	             cache=TRUE,
-               prompt=FALSE,
-               tidy=TRUE,
-               comment=NA,
-               message=FALSE,
-               warning=FALSE,fig.pos = "H") #,fig.pos = "H", out.extra = ""
-#opts_knit$set(width=75)
-```
+
+
+
 
 # Introduction
 
@@ -123,9 +109,13 @@ At the bottom of the document:
 
 Fortunately the math formulas do not differ too much for HTML and PDF documents. For inline math a single `$` is necessary while `$$` creates formula on its own line.
 
+
+
 $$
 BSIc \space (mg^2/mm^4) = ToD^2 \space (mg/cm^3/1000) \cdot ToA.tb^2 \space (mm^2) \space 
 $$
+
+
 
 \newpage
 
@@ -133,68 +123,49 @@ $$
 
 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.
 
-```{r fig1pdf, fig.cap="Figure 1: Somtimes greek in captions as well $\\beta$ but make sure to use double backslash", out.width = "100%"}
-if(!knitr::is_html_output()){
-  knitr::include_graphics("STORK_overlay_blk.pdf")
-}
-# Include for PDF
 
-```
+::: {.cell hash='template2_cache/pdf/fig1pdf_d78ab728dcaad3d34877598b5fb68cb3'}
+::: {.cell-output-display}
+![Figure 1: Somtimes greek in captions as well $\beta$ but make sure to use double backslash](STORK_overlay_blk.pdf){fig-pos='H' width=100%}
+:::
+:::
 
-```{r fig1html, fig.cap="Figure 1: Somtimes greek in captions as well $\\beta$ but make sure to use double backslash", out.width = "100%"}
-# Include for html
-if(knitr::is_html_output()){
-  knitr::include_graphics("STORK_overlay_black.png")
-}
-```
+::: {.cell hash='template2_cache/pdf/fig1html_0ceaaa4c25c7dfd30740962d9dc00d0e'}
+
+:::
+
 
 In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar,
 
 \newpage
 
-```{r}
-if(knitr::is_latex_output() == FALSE){
-    kableExtra::kable(mtcars[1:2, 1:2],
-    caption = "**Table 1**: Example.",
-    col.names = c("MPG",
-                  "Cylinder")
-    ) %>%
-  #landscape() %>%
-  #kable_styling(position = "left",
-  #              font_size = 11) %>%
-  #column_spec(1, width = "13em") %>% 
-  #column_spec(2, width = "22em") %>% 
-  kable_styling(full_width = T, position = "center") %>%
-  footnote(general = "x = note 1; y = note 2.",
-           general_title = "Note.",
-           threeparttable = TRUE)
-}
 
-```
+::: {.cell hash='template2_cache/pdf/unnamed-chunk-1_08f9d3d1ab44bf2301644dfe7a237916'}
 
-```{r}
-if(knitr::is_latex_output() == TRUE){
-  
-  kableExtra::kable(mtcars[1:2, 1:2],
-    longtable = TRUE,
-    booktabs = TRUE,
-    escape = TRUE,
-    linesep = "\\addlinespace",
-    caption = "\\textbf{Table 1}:Example.",
-    col.names = c("MPG",
-                  "Cylinder")
-    ) %>%
-  #landscape() %>%
-  #kable_styling(position = "left",
-  #              font_size = 11) %>%
-  #column_spec(1, width = "13em") %>% 
-  #column_spec(2, width = "22em") %>% 
-  footnote(general = "x = note 1; y = note 2.",
-           general_title = "Note.",
-           threeparttable = TRUE)
-}
+:::
 
-```
+::: {.cell hash='template2_cache/pdf/unnamed-chunk-2_d06998e1f3db3692ad7d84d85345ecd8'}
+::: {.cell-output-display}
+\begin{ThreePartTable}
+\begin{TableNotes}
+\item \textit{Note.} 
+\item x = note 1; y = note 2.
+\end{TableNotes}
+\begin{longtable}[t]{lrr}
+\caption{\label{tab:unnamed-chunk-2}\textbf{Table 1}:Example.}\\
+\toprule
+  & MPG & Cylinder\\
+\midrule
+Mazda RX4 & 21 & 6\\
+\addlinespace
+Mazda RX4 Wag & 21 & 6\\
+\bottomrule
+\insertTableNotes
+\end{longtable}
+\end{ThreePartTable}
+:::
+:::
+
 
 # Discussion
 

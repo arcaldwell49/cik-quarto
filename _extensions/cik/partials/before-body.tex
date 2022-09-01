@@ -11,18 +11,22 @@ $-- %%%%%%%%%%%%%%%%
 \title{$title$}
 
 
-\author{
-$for(author)$
-%$it.name.literal$\textsuperscript{$for(it.affiliations)$$it.number$$sep$,$endfor$$if(it.attributes.equal-contributor)$\Yinyang$endif$$if(it.attributes.corresponding)$*$endif$$if(it.attributes.deceased)$\dag$endif$$if(it.metadata.group)$\textpilcrow$endif$}
- $author.name.literal$$$^{$author.affiliations$}$$$sep$,
-$endfor$
-}
+%\author{
+%$for(by-author)$
+% $it.name.literal$\textsuperscript{$it.number$}$sep$,
+%$endfor$
+%}
 
-\address{
-$for(affiliations)$
-  $$^{$affiliations.id$}$$$affiliations.name$$sep$\\
+$for(by-author)$
+  \author[$for(by-author.affiliation)$ 1 $sep$,$endfor$$if(by-author.email)$,*$endif$]
+  {$by-author.name.literal$}
 $endfor$
-}
+
+$for(by-affiliation)$
+\affil[$it.id$]{$it.name$}
+$endfor$
+
+\address{ \\ }
 %%%% Subject entries to be placed here %%%%
 \subject{
 $sci-subject$

@@ -1261,7 +1261,7 @@ at https://doi.org/\@doi\ or via http://\@jname.royalsocietypublishing.org.\par}
    ^{\mathsection}\or ^{\mathparagraph}\or \|\or **\or \dagger\dagger
    \or \ddagger\ddagger \else\@ctrerr\fi}}
 
-\def\correshead{Author for correspondence:}%
+\def\correshead{Correspondence:}%
 \def\citehead{DOI:}%
 \def\editorhead{Editor:}%
 \def\risenotehead{Editor's Note:}%

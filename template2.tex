@@ -156,6 +156,7 @@
   pdfcreator={LaTeX via pandoc}}
 
 
+\usepackage{authblk}
 \begin{document}
 \captionsetup[table]{labelformat=empty}
 \captionsetup[figure]{labelformat=empty}
@@ -165,16 +166,20 @@
 \title{Some Title}
 
 
-\author{
-%\textsuperscript{}
- $^{}$,
-%\textsuperscript{}
- $^{}$}
+%\author{
+%% Norah Jones\textsuperscript{1},
+%% Jon H. Hamm\textsuperscript{2}%}
 
-\address{
-  $^{1}$Carnegie Mellon University\\
-  $^{2}$University of Chicago\\
-  $^{3}$University of California - San Diego}
+  \author[]
+  {Norah Jones}
+  \author[]
+  {Jon H. Hamm}
+
+\affil[1]{Carnegie Mellon University}
+\affil[2]{University of Chicago}
+\affil[3]{University of California - San Diego}
+
+\address{ \\ }
 %%%% Subject entries to be placed here %%%%
 \subject{
 Another Science
@@ -242,7 +247,7 @@ bibendum sodales, augue velit cursus nunc
 
 \maketitle
 
-\newpage\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[enhanced, borderline west={3pt}{0pt}{shadecolor}, frame hidden, sharp corners, boxrule=0pt, breakable, interior hidden]}{\end{tcolorbox}}\fi
+\newpage\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[boxrule=0pt, interior hidden, breakable, borderline west={3pt}{0pt}{shadecolor}, sharp corners, frame hidden, enhanced]}{\end{tcolorbox}}\fi
 
 \hypertarget{introduction}{%
 \section{Introduction}\label{introduction}}
