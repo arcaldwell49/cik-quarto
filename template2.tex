@@ -147,6 +147,7 @@
 \urlstyle{same} % disable monospaced font for URLs
 \hypersetup{
   pdftitle={Some Title},
+  pdfauthor={Jane Doe; John Doe},
   pdfkeywords={key1, key2, key3},
   colorlinks=true,
   linkcolor={blue},
@@ -167,17 +168,18 @@
 
 
 %\author{
-%% Norah Jones\textsuperscript{1},
-%% Jon H. Hamm\textsuperscript{2}%}
+%% Jane Doe\textsuperscript{1},
+%% John Doe\textsuperscript{2}%}
 
-  \author[]
-  {Norah Jones}
-  \author[]
-  {Jon H. Hamm}
+  \author[1,2,*]
+  {Jane Doe}
+  \author[1]
+  {John Doe}
 
-\affil[1]{Carnegie Mellon University}
-\affil[2]{University of Chicago}
-\affil[3]{University of California - San Diego}
+\affil[1]{Institute for Cool Things}
+\affil[2]{University of Awesome Research}
+
+  \corrauthor[*]{fake@fake.edu}
 
 \address{ \\ }
 %%%% Subject entries to be placed here %%%%
@@ -247,7 +249,7 @@ bibendum sodales, augue velit cursus nunc
 
 \maketitle
 
-\newpage\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[boxrule=0pt, interior hidden, breakable, borderline west={3pt}{0pt}{shadecolor}, sharp corners, frame hidden, enhanced]}{\end{tcolorbox}}\fi
+\newpage\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[boxrule=0pt, borderline west={3pt}{0pt}{shadecolor}, sharp corners, breakable, enhanced, interior hidden, frame hidden]}{\end{tcolorbox}}\fi
 
 \hypertarget{introduction}{%
 \section{Introduction}\label{introduction}}

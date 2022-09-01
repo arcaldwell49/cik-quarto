@@ -1,36 +1,20 @@
 ---
 title: Some Title
 author:
-  - name: 
-      given: Norah
-      family: Jones
-      literal: Norah Jones
-      email: fake@fake.edu
-      orcid: 0000-0003-1689-0557
-      affiliations: 
-        - id: 1
-        - id: 2
-  - name: 
-      given: Jon
-      family: Hamm
-      literal: Jon H. Hamm
-      orcid: 0000-0003-1689-0557
-      affiliations: 
-        - id: 1
-        - id: 2
-affiliations:
-  - id: 1
-    name: Carnegie Mellon University
-    city: Pittsburgh
-    state: PA
-  - id: 2
-    name: University of Chicago
-    city: Chicago
-    state: IL
-  - id: 3
-    name: University of California - San Diego
-    city: San Diego
-    state: CA
+  - name: Jane Doe
+    url: https://example.com
+    orcid: 0000-0000-0000-0000
+    affiliations:
+      - id: some-inst
+        name: Institute for Cool Things
+        url: https://example.com
+      - id: some-uni
+        name: University of Awesome Research
+        url: https://example.com
+    email: fake@fake.edu
+  - name: John Doe
+    affiliations:
+      - ref: some-inst
 doi: "10.51224/XXXXXXXXX"
 journal-editor: "Sam Somebody"
 corresp_author_name: N. Jones
