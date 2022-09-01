@@ -10,9 +10,11 @@ $-- %%%%%%%%%%%%%%%%
 %%%% Article title to be placed here
 \title{$title$}
 
+
 \author{
 $for(author)$
-$author$$$^{$author.affiliations$}$$$sep$,
+%$it.name.literal$\textsuperscript{$for(it.affiliations)$$it.number$$sep$,$endfor$$if(it.attributes.equal-contributor)$\Yinyang$endif$$if(it.attributes.corresponding)$*$endif$$if(it.attributes.deceased)$\dag$endif$$if(it.metadata.group)$\textpilcrow$endif$}
+ $author.name.literal$$$^{$author.affiliations$}$$$sep$,
 $endfor$
 }
 

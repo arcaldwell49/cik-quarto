@@ -1,21 +1,21 @@
 ---
 title: Some Title
 author:
-  - name:
-      given: Norah
-      family: Jones
-      literal: Norah Jones
-    attributes:
-      corresponding: true
-    orcid: 0000-0003-1689-0557
-    affiliations:
+  - name: 
+    - given: Norah
+    - family: Jones
+    - literal: Norah Jones
+    - attributes:
+      - corresponding: true
+    - orcid: 0000-0003-1689-0557
+    - affiliations:
       - ref: 1
       - ref: 2
   - name: 
-      given: Jon
-      family: Hamm
-      literal: Jon H. Hamm
-    affiliations:
+    - given: Jon
+    - family: Hamm
+    - literal: Jon H. Hamm
+    - affiliations:
       - ref: 1
       - ref: 3
 affiliations:
