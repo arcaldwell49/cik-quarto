@@ -9,11 +9,11 @@
 <journal-title>Communications in Kinesiology</journal-title>
 <abbrev-journal-title>Commun in Kinesiology</abbrev-journal-title>
 </journal-title-group>
-<issn publication-format="electronic">2767-0732</issn>
+<issn publication-format="electronic">1545-7885</issn>
 <publisher>
 <publisher-name>Society for Transparency, Openness, and Replication in
 Kinesiology</publisher-name>
-<publisher-loc>Hayward, CA</publisher-loc>
+<publisher-loc>Haywood, CA</publisher-loc>
 </publisher>
 </journal-meta>
 <article-meta>
@@ -21,28 +21,15 @@ Kinesiology</publisher-name>
 <article-title>Some Title</article-title>
 </title-group>
 <contrib-group>
-<contrib contrib-type="author">
-<contrib-id contrib-id-type="orcid">0000-0000-0000-0000</contrib-id>
-<string-name>true</string-name>
-<email>fake@fake.edu</email>
-</contrib>
-<contrib contrib-type="author">
-<string-name>true</string-name>
-</contrib>
-</contrib-group>
+  <contrib contrib-type="author" equal-contrib="yes" id="author-13338"><name><surname>Brunner</surname><given-names>János</given-names></name><xref ref-type="aff" rid="aff1"/><xref ref-type="aff" rid="aff2"/><xref ref-type="fn" rid="equal-contrib">†</xref><xref ref-type="fn" rid="con1"/><xref ref-type="fn" rid="conf1"/></contrib><contrib contrib-type="author" equal-contrib="yes" id="author-13339"><name><surname>Neubrandt</surname><given-names>Máté</given-names></name><xref ref-type="aff" rid="aff1"/><xref ref-type="aff" rid="aff2"/><xref ref-type="fn" rid="equal-contrib">†</xref><xref ref-type="fn" rid="con2"/><xref ref-type="fn" rid="conf1"/></contrib><contrib contrib-type="author" id="author-16368"><name><surname>Van-Weert</surname><given-names>Susan</given-names></name><xref ref-type="aff" rid="aff1"/><xref ref-type="fn" rid="con3"/><xref ref-type="fn" rid="conf1"/></contrib><contrib contrib-type="author" id="author-13341"><name><surname>Andrási</surname><given-names>Tibor</given-names></name><xref ref-type="aff" rid="aff1"/><xref ref-type="aff" rid="aff2"/><xref ref-type="fn" rid="con4"/><xref ref-type="fn" rid="conf1"/></contrib><contrib contrib-type="author" id="author-13342"><name><surname>Kleine Borgmann</surname><given-names>Felix B</given-names></name><xref ref-type="aff" rid="aff3"/><xref ref-type="fn" rid="con5"/><xref ref-type="fn" rid="conf1"/></contrib><contrib contrib-type="author" corresp="yes" id="author-13343"><name><surname>Jessberger</surname><given-names>Sebastian</given-names></name><xref ref-type="aff" rid="aff3"/><xref ref-type="corresp" rid="cor1">*</xref><xref ref-type="other" rid="par-3"/><xref ref-type="other" rid="par-4"/><xref ref-type="fn" rid="con6"/><xref ref-type="fn" rid="conf1"/></contrib><contrib contrib-type="author" corresp="yes" id="author-12783"><name><surname>Szabadics</surname><given-names>János</given-names></name><xref ref-type="aff" rid="aff1"/><xref ref-type="corresp" rid="cor2">*</xref><xref ref-type="other" rid="par-1"/><xref ref-type="other" rid="par-2"/><xref ref-type="other" rid="par-5"/><xref ref-type="fn" rid="con7"/><xref ref-type="fn" rid="conf1"/></contrib><aff id="aff1"><institution content-type="dept">Lendület Laboratory of Cellular Neuropharmacology</institution>, <institution>Institute of Experimental Medicine, Hungarian Academy of Sciences</institution>, <addr-line><named-content content-type="city">Budapest</named-content></addr-line>, <country>Hungary</country></aff><aff id="aff2"><institution content-type="dept">János Szentágothai School of Neurosciences</institution>, <institution>Semmelweis University School of PhD Studies</institution>, <addr-line><named-content content-type="city">Budapest</named-content></addr-line>, <country>Hungary</country></aff><aff id="aff3"><institution content-type="dept">Brain Research Institute, Faculty of Medicine and Science</institution>, <institution>University of Zurich</institution>, <addr-line><named-content content-type="city">Zurich</named-content></addr-line>, <country>Switzerland</country></aff></contrib-group>
+<contrib-group content-type="section">
+  <contrib contrib-type="editor"><name><surname>Westbrook</surname><given-names>Gary L</given-names></name><role>Reviewing editor</role><aff><institution>Vollum Institute</institution>, <country>United States</country></aff></contrib></contrib-group>
+<author-notes><corresp id="cor1"><label>*</label>For correspondence: <email>jessberger@hifo.uzh.ch</email> (SJ);</corresp><corresp id="cor2"><label>*</label>For correspondence: <email>szabadics.janos@koki.mta.hu</email> (JS)</corresp><fn fn-type="con" id="equal-contrib"><label>†</label><p>These authors contributed equally to this work</p></fn></author-notes>
 <pub-date date-type="pub" publication-format="electronic" iso-8601-date="2022-09-02">
 <day>2</day>
 <month>9</month>
 <year>2022</year>
 </pub-date>
-<permissions>
-<license license-type="open-access" xlink:href="http://creativecommons.org/licenses/by/4.0/">
-<license-p>This is an open-access article distributed under the terms of
-the Creative Commons Attribution License, which permits unrestricted
-use, distribution, and reproduction in any medium, provided the original
-author and source are credited.</license-p>
-</license>
-</permissions>
 <abstract>
 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
 ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis

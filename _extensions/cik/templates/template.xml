@@ -1,0 +1,40 @@
+
+<front>
+<journal-meta>
+<journal-id></journal-id>
+<journal-title-group>
+</journal-title-group>
+<issn publication-format="electronic">$issn$</issn>
+<publisher>
+<publisher-name>STORK</publisher-name>
+</publisher>
+</journal-meta>
+<article-meta>
+<title-group>
+<article-title>$title$</article-title>
+</title-group>
+<contrib-group>
+<contrib contrib-type="author">
+<string-name>Jane Doe</string-name>
+</contrib>
+<contrib contrib-type="author">
+<string-name>John Doe</string-name>
+</contrib>
+</contrib-group>
+<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2022-09-02">
+<day>2</day>
+<month>9</month>
+<year>2022</year>
+</pub-date>
+<abstract>
+$abstract$
+</abstract>
+</article-meta>
+</front>
+<body>
+  $body$
+</body>
+<back>
+
+</back>
+</article>

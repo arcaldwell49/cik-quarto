@@ -173,18 +173,19 @@
 
   \author[1,2,*]
   {Jane Doe}
-  \author[1]
+  \author[1,*]
   {John Doe}
 
 \affil[1]{Institute for Cool Things}
 \affil[2]{University of Awesome Research}
 
   \corrauthor[*]{fake@fake.edu}
+  \corrauthor[*]{fak2@fake2.edu}
 
 \address{ \\ }
 %%%% Subject entries to be placed here %%%%
 \subject{
-Another Science
+Subject1Subject2
 }
 
 %%%% Keyword entries to be placed here %%%%
@@ -194,10 +195,10 @@ key2,
 key3}
 
 %%%% Insert corresponding author and its email address}
-\corres{
-  N. Jones\\
-{\footnotesize n.jones@fake.edu}
-}
+%\corres{
+%  \\
+%{\footnotesize }
+%}
 \inserttype{
 {\Large Research}
 }
@@ -249,7 +250,7 @@ bibendum sodales, augue velit cursus nunc
 
 \maketitle
 
-\newpage\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[boxrule=0pt, borderline west={3pt}{0pt}{shadecolor}, sharp corners, breakable, enhanced, interior hidden, frame hidden]}{\end{tcolorbox}}\fi
+\newpage\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[borderline west={3pt}{0pt}{shadecolor}, frame hidden, sharp corners, breakable, enhanced, interior hidden, boxrule=0pt]}{\end{tcolorbox}}\fi
 
 \hypertarget{introduction}{%
 \section{Introduction}\label{introduction}}

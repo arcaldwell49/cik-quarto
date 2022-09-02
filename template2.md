@@ -1,47 +1,42 @@
 ---
 title: Some Title
 author:
-  - name: Jane Doe
+  - given-name: Jane Doe
     url: https://example.com
     orcid: 0000-0000-0000-0000
-    affiliations:
-      - id: some-inst
-        name: Institute for Cool Things
-        url: https://example.com
-      - id: some-uni
-        name: University of Awesome Research
-        url: https://example.com
+    affiliations: [some-inst, some-uni]
     email: fake@fake.edu
-  - name: John Doe
-    affiliations:
-      - ref: some-inst
+  - given-name: John Doe
+    affiliations: some-inst
+affiliations:
+  - id: some-inst
+    name: Institute for Cool Things
+    url: https://example.com
+  - id: some-uni
+    name: University of Awesome Research
+    url: https://example.com
 doi: "10.51224/XXXXXXXXX"
 journal-editor: "Sam Somebody"
-corresp_author_name: N. Jones
-corresp_author_email: "n.jones@fake.edu"
 article_type: Research
 notetf: false
 printnote: "Something to say here by the editors. Good for RISE editions."
-sci-subject:
-  - Another Science
-keywords:
-  - key1
-  - key2
-  - key3
+sci-subject: [Subject1, Subject2]
+keywords: [key1, key2, key3]
 abstract: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc"
 format: 
   cik-html: default
-  cik-pdf: 
-    cite-method: citeproc
-    keep-tex: true
-  jats: default
+  cik-pdf: default
+  cik-jats: default
+  jats_articleauthoring: default
+issn: 100843
 bibliography: refs.json
-csl: apa7.csl
-link-citations: true
 always_allow_html: true
+self-contained-math: true
+csl: apa7.csl
+publisher-id: CiK
 pdf-engine: lualatex
 page-layout: article
-date: "2022-09-01"
+date: "2022-09-02"
 execute:
   keep-md: true
 editor: visual
@@ -53,7 +48,7 @@ editor: visual
 
 # Introduction
 
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa @CreativeTag1. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa [@CreativeTag1]. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.
 
 Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc, quis gravida magna mi a libero. Fusce vulputate eleifend sapien.
 
@@ -108,13 +103,13 @@ $$
 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.
 
 
-::: {.cell hash='template2_cache/pdf/fig1pdf_d78ab728dcaad3d34877598b5fb68cb3'}
+::: {.cell hash='template2_cache/jats/fig1pdf_b467578b080d1e313f7b8ece50c08c00'}
 ::: {.cell-output-display}
 ![Figure 1: Somtimes greek in captions as well $\beta$ but make sure to use double backslash](STORK_overlay_blk.pdf){fig-pos='H' width=100%}
 :::
 :::
 
-::: {.cell hash='template2_cache/pdf/fig1html_0ceaaa4c25c7dfd30740962d9dc00d0e'}
+::: {.cell hash='template2_cache/jats/fig1html_cb8461c98674095c1580ca90c59db870'}
 
 :::
 
@@ -124,30 +119,45 @@ In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum fe
 \newpage
 
 
-::: {.cell hash='template2_cache/pdf/unnamed-chunk-1_08f9d3d1ab44bf2301644dfe7a237916'}
-
-:::
-
-::: {.cell hash='template2_cache/pdf/unnamed-chunk-2_d06998e1f3db3692ad7d84d85345ecd8'}
+::: {.cell hash='template2_cache/jats/unnamed-chunk-1_f6581d1a46638519f41d420c6e5ef2e6'}
 ::: {.cell-output-display}
-\begin{ThreePartTable}
-\begin{TableNotes}
-\item \textit{Note.} 
-\item x = note 1; y = note 2.
-\end{TableNotes}
-\begin{longtable}[t]{lrr}
-\caption{\label{tab:unnamed-chunk-2}\textbf{Table 1}:Example.}\\
-\toprule
-  & MPG & Cylinder\\
-\midrule
-Mazda RX4 & 21 & 6\\
-\addlinespace
-Mazda RX4 Wag & 21 & 6\\
-\bottomrule
-\insertTableNotes
-\end{longtable}
-\end{ThreePartTable}
+
+`````{=html}
+<table class="table" style="margin-left: auto; margin-right: auto;border-bottom: 0;">
+<caption>**Table 1**: Example.</caption>
+ <thead>
+  <tr>
+   <th style="text-align:left;">   </th>
+   <th style="text-align:right;"> MPG </th>
+   <th style="text-align:right;"> Cylinder </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> Mazda RX4 </td>
+   <td style="text-align:right;"> 21 </td>
+   <td style="text-align:right;"> 6 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Mazda RX4 Wag </td>
+   <td style="text-align:right;"> 21 </td>
+   <td style="text-align:right;"> 6 </td>
+  </tr>
+</tbody>
+<tfoot>
+<tr><td style="padding: 0; " colspan="100%"><span style="font-style: italic;">Note.</span></td></tr>
+<tr><td style="padding: 0; " colspan="100%">
+<sup></sup> x = note 1; y = note 2.</td></tr>
+</tfoot>
+</table>
+
+`````
+
 :::
+:::
+
+::: {.cell hash='template2_cache/jats/unnamed-chunk-2_31ff7dbc48badf061c1b7ec063ea92f5'}
+
 :::
 
 
