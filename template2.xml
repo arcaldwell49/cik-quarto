@@ -22,12 +22,10 @@ Kinesiology</publisher-name>
 </title-group>
 <contrib-group>
 <contrib contrib-type="author">
-<contrib-id contrib-id-type="orcid">0000-0000-0000-0000</contrib-id>
-<string-name>true</string-name>
-<email>fake@fake.edu</email>
+<string-name>Jane Doe</string-name>
 </contrib>
 <contrib contrib-type="author">
-<string-name>true</string-name>
+<string-name>John Doe</string-name>
 </contrib>
 </contrib-group>
 <pub-date date-type="pub" publication-format="electronic" iso-8601-date="2022-09-02">

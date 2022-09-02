@@ -26,10 +26,7 @@ abstract: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean comm
 format: 
   cik-html: default
   cik-pdf: default
-  cik-jats: 
-    template: template.xml
-  jats_articleauthoring: default
-issn: 100843
+  cik-jats: default
 bibliography: refs.json
 always_allow_html: true
 self-contained-math: true

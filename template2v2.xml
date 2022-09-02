@@ -1,36 +1,161 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD v1.2 20190208//EN"
                   "JATS-archivearticle1.dtd">
-<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" dtd-version="1.2" article-type="other">
-<front>
-<journal-meta>
-<journal-id journal-id-type="publisher-id">STORK</journal-id>
-<journal-title-group>
-<journal-title>Communications in Kinesiology</journal-title>
-<abbrev-journal-title>Commun in Kinesiology</abbrev-journal-title>
-</journal-title-group>
-<issn publication-format="electronic">1545-7885</issn>
-<publisher>
-<publisher-name>Society for Transparency, Openness, and Replication in
+<article
+	xmlns:mml="http://www.w3.org/1998/Math/MathML"
+	xmlns:xlink="http://www.w3.org/1999/xlink" dtd-version="1.2" article-type="other">
+	<front>
+		<journal-meta>
+			<journal-id journal-id-type="publisher-id">STORK</journal-id>
+			<journal-title-group>
+				<journal-title>Communications in Kinesiology</journal-title>
+				<abbrev-journal-title>Commun in Kinesiology</abbrev-journal-title>
+			</journal-title-group>
+			<issn publication-format="electronic">1545-7885</issn>
+			<publisher>
+				<publisher-name>Society for Transparency, Openness, and Replication in
 Kinesiology</publisher-name>
-<publisher-loc>Haywood, CA</publisher-loc>
-</publisher>
-</journal-meta>
-<article-meta>
-<title-group>
-<article-title>Some Title</article-title>
-</title-group>
-<contrib-group>
-  <contrib contrib-type="author" equal-contrib="yes" id="author-13338"><name><surname>Brunner</surname><given-names>János</given-names></name><xref ref-type="aff" rid="aff1"/><xref ref-type="aff" rid="aff2"/><xref ref-type="fn" rid="equal-contrib">†</xref><xref ref-type="fn" rid="con1"/><xref ref-type="fn" rid="conf1"/></contrib><contrib contrib-type="author" equal-contrib="yes" id="author-13339"><name><surname>Neubrandt</surname><given-names>Máté</given-names></name><xref ref-type="aff" rid="aff1"/><xref ref-type="aff" rid="aff2"/><xref ref-type="fn" rid="equal-contrib">†</xref><xref ref-type="fn" rid="con2"/><xref ref-type="fn" rid="conf1"/></contrib><contrib contrib-type="author" id="author-16368"><name><surname>Van-Weert</surname><given-names>Susan</given-names></name><xref ref-type="aff" rid="aff1"/><xref ref-type="fn" rid="con3"/><xref ref-type="fn" rid="conf1"/></contrib><contrib contrib-type="author" id="author-13341"><name><surname>Andrási</surname><given-names>Tibor</given-names></name><xref ref-type="aff" rid="aff1"/><xref ref-type="aff" rid="aff2"/><xref ref-type="fn" rid="con4"/><xref ref-type="fn" rid="conf1"/></contrib><contrib contrib-type="author" id="author-13342"><name><surname>Kleine Borgmann</surname><given-names>Felix B</given-names></name><xref ref-type="aff" rid="aff3"/><xref ref-type="fn" rid="con5"/><xref ref-type="fn" rid="conf1"/></contrib><contrib contrib-type="author" corresp="yes" id="author-13343"><name><surname>Jessberger</surname><given-names>Sebastian</given-names></name><xref ref-type="aff" rid="aff3"/><xref ref-type="corresp" rid="cor1">*</xref><xref ref-type="other" rid="par-3"/><xref ref-type="other" rid="par-4"/><xref ref-type="fn" rid="con6"/><xref ref-type="fn" rid="conf1"/></contrib><contrib contrib-type="author" corresp="yes" id="author-12783"><name><surname>Szabadics</surname><given-names>János</given-names></name><xref ref-type="aff" rid="aff1"/><xref ref-type="corresp" rid="cor2">*</xref><xref ref-type="other" rid="par-1"/><xref ref-type="other" rid="par-2"/><xref ref-type="other" rid="par-5"/><xref ref-type="fn" rid="con7"/><xref ref-type="fn" rid="conf1"/></contrib><aff id="aff1"><institution content-type="dept">Lendület Laboratory of Cellular Neuropharmacology</institution>, <institution>Institute of Experimental Medicine, Hungarian Academy of Sciences</institution>, <addr-line><named-content content-type="city">Budapest</named-content></addr-line>, <country>Hungary</country></aff><aff id="aff2"><institution content-type="dept">János Szentágothai School of Neurosciences</institution>, <institution>Semmelweis University School of PhD Studies</institution>, <addr-line><named-content content-type="city">Budapest</named-content></addr-line>, <country>Hungary</country></aff><aff id="aff3"><institution content-type="dept">Brain Research Institute, Faculty of Medicine and Science</institution>, <institution>University of Zurich</institution>, <addr-line><named-content content-type="city">Zurich</named-content></addr-line>, <country>Switzerland</country></aff></contrib-group>
-<contrib-group content-type="section">
-  <contrib contrib-type="editor"><name><surname>Westbrook</surname><given-names>Gary L</given-names></name><role>Reviewing editor</role><aff><institution>Vollum Institute</institution>, <country>United States</country></aff></contrib></contrib-group>
-<author-notes><corresp id="cor1"><label>*</label>For correspondence: <email>jessberger@hifo.uzh.ch</email> (SJ);</corresp><corresp id="cor2"><label>*</label>For correspondence: <email>szabadics.janos@koki.mta.hu</email> (JS)</corresp><fn fn-type="con" id="equal-contrib"><label>†</label><p>These authors contributed equally to this work</p></fn></author-notes>
-<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2022-09-02">
-<day>2</day>
-<month>9</month>
-<year>2022</year>
-</pub-date>
-<abstract>
+				<publisher-loc>Haywood, CA</publisher-loc>
+			</publisher>
+		</journal-meta>
+		<article-meta>
+			<title-group>
+				<article-title>Some Title</article-title>
+			</title-group>
+			<contrib-group>
+				<contrib contrib-type="author" equal-contrib="yes" id="author-13338">
+					<name>
+						<surname>Brunner</surname>
+						<given-names>János</given-names>
+					</name>
+					<xref ref-type="aff" rid="aff1"/>
+					<xref ref-type="aff" rid="aff2"/>
+					<xref ref-type="fn" rid="equal-contrib">†</xref>
+					<xref ref-type="fn" rid="con1"/>
+					<xref ref-type="fn" rid="conf1"/>
+				</contrib>
+				<contrib contrib-type="author" equal-contrib="yes" id="author-13339">
+					<name>
+						<surname>Neubrandt</surname>
+						<given-names>Máté</given-names>
+					</name>
+					<xref ref-type="aff" rid="aff1"/>
+					<xref ref-type="aff" rid="aff2"/>
+					<xref ref-type="fn" rid="equal-contrib">†</xref>
+					<xref ref-type="fn" rid="con2"/>
+					<xref ref-type="fn" rid="conf1"/>
+				</contrib>
+				<contrib contrib-type="author" id="author-16368">
+					<name>
+						<surname>Van-Weert</surname>
+						<given-names>Susan</given-names>
+					</name>
+					<xref ref-type="aff" rid="aff1"/>
+					<xref ref-type="fn" rid="con3"/>
+					<xref ref-type="fn" rid="conf1"/>
+				</contrib>
+				<contrib contrib-type="author" id="author-13341">
+					<name>
+						<surname>Andrási</surname>
+						<given-names>Tibor</given-names>
+					</name>
+					<xref ref-type="aff" rid="aff1"/>
+					<xref ref-type="aff" rid="aff2"/>
+					<xref ref-type="fn" rid="con4"/>
+					<xref ref-type="fn" rid="conf1"/>
+				</contrib>
+				<contrib contrib-type="author" id="author-13342">
+					<name>
+						<surname>Kleine Borgmann</surname>
+						<given-names>Felix B</given-names>
+					</name>
+					<xref ref-type="aff" rid="aff3"/>
+					<xref ref-type="fn" rid="con5"/>
+					<xref ref-type="fn" rid="conf1"/>
+				</contrib>
+				<contrib contrib-type="author" corresp="yes" id="author-13343">
+					<name>
+						<surname>Jessberger</surname>
+						<given-names>Sebastian</given-names>
+					</name>
+					<xref ref-type="aff" rid="aff3"/>
+					<xref ref-type="corresp" rid="cor1">*</xref>
+					<xref ref-type="other" rid="par-3"/>
+					<xref ref-type="other" rid="par-4"/>
+					<xref ref-type="fn" rid="con6"/>
+					<xref ref-type="fn" rid="conf1"/>
+				</contrib>
+				<contrib contrib-type="author" corresp="yes" id="author-12783">
+					<name>
+						<surname>Szabadics</surname>
+						<given-names>János</given-names>
+					</name>
+					<xref ref-type="aff" rid="aff1"/>
+					<xref ref-type="corresp" rid="cor2">*</xref>
+					<xref ref-type="other" rid="par-1"/>
+					<xref ref-type="other" rid="par-2"/>
+					<xref ref-type="other" rid="par-5"/>
+					<xref ref-type="fn" rid="con7"/>
+					<xref ref-type="fn" rid="conf1"/>
+				</contrib>
+				<aff id="aff1">
+					<institution content-type="dept">Lendület Laboratory of Cellular Neuropharmacology</institution>, 
+					<institution>Institute of Experimental Medicine, Hungarian Academy of Sciences</institution>, 
+					<addr-line>
+						<named-content content-type="city">Budapest</named-content>
+					</addr-line>, 
+					<country>Hungary</country>
+				</aff>
+				<aff id="aff2">
+					<institution content-type="dept">János Szentágothai School of Neurosciences</institution>, 
+					<institution>Semmelweis University School of PhD Studies</institution>, 
+					<addr-line>
+						<named-content content-type="city">Budapest</named-content>
+					</addr-line>, 
+					<country>Hungary</country>
+				</aff>
+				<aff id="aff3">
+					<institution content-type="dept">Brain Research Institute, Faculty of Medicine and Science</institution>, 
+					<institution>University of Zurich</institution>, 
+					<addr-line>
+						<named-content content-type="city">Zurich</named-content>
+					</addr-line>, 
+					<country>Switzerland</country>
+				</aff>
+			</contrib-group>
+			<contrib-group content-type="section">
+				<contrib contrib-type="editor">
+					<name>
+						<surname>Westbrook</surname>
+						<given-names>Gary L</given-names>
+					</name>
+					<role>Reviewing editor</role>
+					<aff>
+						<institution>Vollum Institute</institution>, 
+						<country>United States</country>
+					</aff>
+				</contrib>
+			</contrib-group>
+			<author-notes>
+				<corresp id="cor1">
+					<label>*</label>For correspondence: 
+					<email>jessberger@hifo.uzh.ch</email> (SJ);
+				</corresp>
+				<corresp id="cor2">
+					<label>*</label>For correspondence: 
+					<email>szabadics.janos@koki.mta.hu</email> (JS)
+				</corresp>
+				<fn fn-type="con" id="equal-contrib">
+					<label>†</label>
+					<p>These authors contributed equally to this work</p>
+				</fn>
+			</author-notes>
+			<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2022-09-02">
+				<day>2</day>
+				<month>9</month>
+				<year>2022</year>
+			</pub-date>
+			<abstract>
 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
 ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis
 dis parturient montes, nascetur ridiculus mus. Donec quam felis,
@@ -52,14 +177,15 @@ amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris
 sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget
 bibendum sodales, augue velit cursus nunc
 </abstract>
-</article-meta>
-</front>
-<body>
-<sec id="introduction">
-  <title>Introduction</title>
-  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+		</article-meta>
+	</front>
+	<body>
+		<sec id="introduction">
+			<title>Introduction</title>
+			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
   commodo ligula eget dolor. Aenean massa
-  (<xref alt="Somebody &amp; Person, 2015" rid="ref-CreativeTag1" ref-type="bibr">Somebody
+  (
+				<xref alt="Somebody &amp; Person, 2015" rid="ref-CreativeTag1" ref-type="bibr">Somebody
   &amp; Person, 2015</xref>). Cum sociis natoque penatibus et magnis dis
   parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies
   nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis
@@ -69,8 +195,9 @@ bibendum sodales, augue velit cursus nunc
   dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend
   tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
   enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
-  tellus.</p>
-  <p>Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum.
+  tellus.
+			</p>
+			<p>Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum.
   Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur
   ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas
   tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit
@@ -82,7 +209,7 @@ bibendum sodales, augue velit cursus nunc
   magna. Sed consequat, leo eget bibendum sodales, augue velit cursus
   nunc, quis gravida magna mi a libero. Fusce vulputate eleifend
   sapien.</p>
-  <p>Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id,
+			<p>Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id,
   metus. Nullam accumsan lorem in dui. Cras ultricies mi eu turpis
   hendrerit fringilla. Vestibulum ante ipsum primis in faucibus orci
   luctus et ultrices posuere cubilia Curae; In ac dui quis mi
@@ -102,77 +229,110 @@ bibendum sodales, augue velit cursus nunc
   accumsan cursus velit. Vestibulum ante ipsum primis in faucibus orci
   luctus et ultrices posuere cubilia Curae; Sed aliquam, nisi quis
   porttitor congue, elit erat euismod orci, ac</p>
-  <p></p>
-</sec>
-<sec id="methods">
-  <title>Methods</title>
-  <sec id="greek">
-    <title>Greek</title>
-    <p>Many times greek letters/symbols need to be provided outside of
-    math mode. So you may say <inline-formula><alternatives>
-    <tex-math><![CDATA[\beta]]></tex-math>
-    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>β</mml:mi></mml:math></alternatives></inline-formula></p>
-  </sec>
-  <sec id="superscript">
-    <title>Superscript</title>
-    <p>You can give Superscript<sup>1</sup> or Subscript<sub>2</sub></p>
-  </sec>
-  <sec id="quotes-and-block-quotes">
-    <title>Quotes and Block Quotes</title>
-    <disp-quote>
-      <p>This can easily be done</p>
-      <list list-type="bullet">
-        <list-item>
-          <p>ME</p>
-        </list-item>
-      </list>
-    </disp-quote>
-  </sec>
-  <sec id="links">
-    <title>Links</title>
-    <preformat>A [linked phrase][id].</preformat>
-    <p>At the bottom of the document:</p>
-    <preformat>[id]: http://example.com/ &quot;Title&quot;</preformat>
-  </sec>
-  <sec id="images">
-    <title>Images</title>
-    <preformat>![alt text][id]</preformat>
-  </sec>
-  <sec id="math">
-    <title>Math</title>
-    <p>Fortunately the math formulas do not differ too much for HTML and
-    PDF documents. For inline math a single <monospace>$</monospace> is
-    necessary while <monospace>$$</monospace> creates formula on its own
-    line.</p>
-    <p><disp-formula><tex-math><![CDATA[
+			<p></p>
+		</sec>
+		<sec id="methods">
+			<title>Methods</title>
+			<sec id="greek">
+				<title>Greek</title>
+				<p>Many times greek letters/symbols need to be provided outside of
+    math mode. So you may say 
+					<inline-formula>
+						<alternatives>
+							<tex-math>
+								<![CDATA[\beta]]>
+							</tex-math>
+							<mml:math display="inline"
+								xmlns:mml="http://www.w3.org/1998/Math/MathML">
+								<mml:mi>β</mml:mi>
+							</mml:math>
+						</alternatives>
+					</inline-formula>
+				</p>
+			</sec>
+			<sec id="superscript">
+				<title>Superscript</title>
+				<p>You can give Superscript
+					<sup>1</sup> or Subscript
+					<sub>2</sub>
+				</p>
+			</sec>
+			<sec id="quotes-and-block-quotes">
+				<title>Quotes and Block Quotes</title>
+				<disp-quote>
+					<p>This can easily be done</p>
+					<list list-type="bullet">
+						<list-item>
+							<p>ME</p>
+						</list-item>
+					</list>
+				</disp-quote>
+			</sec>
+			<sec id="links">
+				<title>Links</title>
+				<preformat>A [linked phrase][id].</preformat>
+				<p>At the bottom of the document:</p>
+				<preformat>[id]: http://example.com/ &quot;Title&quot;</preformat>
+			</sec>
+			<sec id="images">
+				<title>Images</title>
+				<preformat>![alt text][id]</preformat>
+			</sec>
+			<sec id="math">
+				<title>Math</title>
+				<p>Fortunately the math formulas do not differ too much for HTML and
+    PDF documents. For inline math a single 
+					<monospace>$</monospace> is
+    necessary while 
+					<monospace>$$</monospace> creates formula on its own
+    line.
+				</p>
+				<p>
+					<disp-formula>
+						<tex-math>
+							<![CDATA[
     BSIc \space (mg^2/mm^4) = ToD^2 \space (mg/cm^3/1000) \cdot ToA.tb^2 \space (mm^2) \space 
-    ]]></tex-math></disp-formula></p>
-    <p></p>
-  </sec>
-</sec>
-<sec id="results">
-  <title>Results</title>
-  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+    ]]>
+						</tex-math>
+					</disp-formula>
+				</p>
+				<p></p>
+			</sec>
+		</sec>
+		<sec id="results">
+			<title>Results</title>
+			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
   commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus
   et magnis dis parturient montes, nascetur ridiculus mus. Donec quam
   felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla
   consequat massa quis enim. Donec pede justo, fringilla vel, aliquet
   nec, vulputate eget, arcu.</p>
-  <boxed-text>
-    <boxed-text>
-      <fig>
-        <caption><p>Figure 1: Somtimes greek in captions as well
-        <inline-formula><alternatives>
-        <tex-math><![CDATA[\beta]]></tex-math>
-        <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>β</mml:mi></mml:math></alternatives></inline-formula>
-        but make sure to use double backslash</p></caption>
-        <graphic mimetype="application" mime-subtype="pdf" xlink:href="STORK_overlay_blk.pdf" xlink:title="" />
-      </fig>
-    </boxed-text>
-  </boxed-text>
-  <boxed-text>
-  </boxed-text>
-  <p>In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
+			<boxed-text>
+				<boxed-text>
+					<fig>
+						<caption>
+							<p>Figure 1: Somtimes greek in captions as well
+        
+								<inline-formula>
+									<alternatives>
+										<tex-math>
+											<![CDATA[\beta]]>
+										</tex-math>
+										<mml:math display="inline"
+											xmlns:mml="http://www.w3.org/1998/Math/MathML">
+											<mml:mi>β</mml:mi>
+										</mml:math>
+									</alternatives>
+								</inline-formula>
+        but make sure to use double backslash
+							</p>
+						</caption>
+						<graphic mimetype="application" mime-subtype="pdf" xlink:href="STORK_overlay_blk.pdf" xlink:title="" />
+					</fig>
+				</boxed-text>
+			</boxed-text>
+			<boxed-text></boxed-text>
+			<p>In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
   Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras
   dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend
   tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
@@ -183,56 +343,59 @@ bibendum sodales, augue velit cursus nunc
   tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit
   amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel,
   luctus pulvinar,</p>
-  <p></p>
-  <boxed-text>
-    <boxed-text>
-      <table-wrap>
-        <caption>
-          <p>**Table 1**: Example.</p>
-        </caption>
-        <table style="margin-left: auto; margin-right: auto;border-bottom: 0;">
-          <thead>
-            <tr>
-              <th align="left"></th>
-              <th align="right">MPG</th>
-              <th align="right">Cylinder</th>
-            </tr>
-          </thead>
-          <tfoot>
-            <tr>
-              <td align="left" style="padding: 0"><styled-content style="font-style: italic;">Note.</styled-content></td>
-              <td align="right"></td>
-              <td align="right"></td>
-            </tr>
-            <tr>
-              <td align="left" style="padding: 0"><sup></sup> x = note
-              1; y = note 2.</td>
-              <td align="right"></td>
-              <td align="right"></td>
-            </tr>
-          </tfoot>
-          <tbody>
-            <tr>
-              <td align="left">Mazda RX4</td>
-              <td align="right">21</td>
-              <td align="right">6</td>
-            </tr>
-            <tr>
-              <td align="left">Mazda RX4 Wag</td>
-              <td align="right">21</td>
-              <td align="right">6</td>
-            </tr>
-          </tbody>
-        </table>
-      </table-wrap>
-    </boxed-text>
-  </boxed-text>
-  <boxed-text>
-  </boxed-text>
-</sec>
-<sec id="discussion">
-  <title>Discussion</title>
-  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+			<p></p>
+			<boxed-text>
+				<boxed-text>
+					<table-wrap>
+						<caption>
+							<p>**Table 1**: Example.</p>
+						</caption>
+						<table style="margin-left: auto; margin-right: auto;border-bottom: 0;">
+							<thead>
+								<tr>
+									<th align="left"></th>
+									<th align="right">MPG</th>
+									<th align="right">Cylinder</th>
+								</tr>
+							</thead>
+							<tfoot>
+								<tr>
+									<td align="left" style="padding: 0">
+										<styled-content style="font-style: italic;">Note.</styled-content>
+									</td>
+									<td align="right"></td>
+									<td align="right"></td>
+								</tr>
+								<tr>
+									<td align="left" style="padding: 0">
+										<sup></sup> x = note
+              1; y = note 2.
+									</td>
+									<td align="right"></td>
+									<td align="right"></td>
+								</tr>
+							</tfoot>
+							<tbody>
+								<tr>
+									<td align="left">Mazda RX4</td>
+									<td align="right">21</td>
+									<td align="right">6</td>
+								</tr>
+								<tr>
+									<td align="left">Mazda RX4 Wag</td>
+									<td align="right">21</td>
+									<td align="right">6</td>
+								</tr>
+							</tbody>
+						</table>
+					</table-wrap>
+				</boxed-text>
+			</boxed-text>
+			<boxed-text></boxed-text>
+		</sec>
+		<sec id="discussion">
+			<title>Discussion</title>
+			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
   commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus
   et magnis dis parturient montes, nascetur ridiculus mus. Donec quam
   felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla
@@ -241,7 +404,7 @@ bibendum sodales, augue velit cursus nunc
   venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
   Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean
   vulputate eleifend tellus.</p>
-  <p>Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
+			<p>Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
   enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.
   Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum.
   Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur
@@ -250,7 +413,7 @@ bibendum sodales, augue velit cursus nunc
   amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel,
   luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante
   tincidunt tempus.</p>
-  <p>Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante.
+			<p>Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante.
   Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed
   fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed
   consequat, leo eget bibendum sodales, augue velit cursus nunc, quis
@@ -260,7 +423,7 @@ bibendum sodales, augue velit cursus nunc
   fringilla. Vestibulum ante ipsum primis in faucibus orci luctus et
   ultrices posuere cubilia Curae; In ac dui quis mi consectetuer
   lacinia.</p>
-  <p>Nam pretium turpis et arcu. Duis arcu tortor, suscipit eget,
+			<p>Nam pretium turpis et arcu. Duis arcu tortor, suscipit eget,
   imperdiet nec, imperdiet iaculis, ipsum. Sed aliquam ultrices mauris.
   Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris.
   Praesent adipiscing. Phasellus ullamcorper ipsum rutrum nunc. Nunc
@@ -276,9 +439,9 @@ bibendum sodales, augue velit cursus nunc
   Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
   posuere cubilia Curae; Sed aliquam, nisi quis porttitor congue, elit
   erat euismod orci, ac</p>
-  <sec id="conclusion">
-    <title>Conclusion</title>
-    <p>orem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+			<sec id="conclusion">
+				<title>Conclusion</title>
+				<p>orem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
     commodo ligula eget dolor. Aenean massa. Cum sociis natoque
     penatibus et magnis dis parturient montes, nascetur ridiculus mus.
     Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
@@ -289,66 +452,70 @@ bibendum sodales, augue velit cursus nunc
     semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula,
     porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem
     ante, dapibus in, viverra quis, feugiat a.</p>
-    <p></p>
-  </sec>
-</sec>
-<sec id="additional-information">
-  <title>Additional Information</title>
-  <sec id="data-accessibility">
-    <title>Data Accessibility</title>
-    <p>Data is available via a ….</p>
-  </sec>
-  <sec id="author-contributions">
-    <title>Author Contributions</title>
-    <list list-type="bullet">
-      <list-item>
-        <p>Contributed to conception and design:</p>
-      </list-item>
-      <list-item>
-        <p>Contributed to acquisition of data:</p>
-      </list-item>
-      <list-item>
-        <p>Contributed to analysis and interpretation of data:</p>
-      </list-item>
-      <list-item>
-        <p>Drafted and/or revised the article:</p>
-      </list-item>
-      <list-item>
-        <p>Approved the submitted version for publication:</p>
-      </list-item>
-    </list>
-  </sec>
-  <sec id="conflict-of-interest">
-    <title>Conflict of Interest</title>
-    <p>Authors have no conflicts of interest to declare.</p>
-  </sec>
-  <sec id="funding">
-    <title>Funding</title>
-    <p>Support provided by ….</p>
-  </sec>
-  <sec id="acknowledgments">
-    <title>Acknowledgments</title>
-    <p>We thank everybody.</p>
-  </sec>
-  <sec id="preprint">
-    <title>Preprint</title>
-    <p>The pre-publication version of this manuscript can be found on
+				<p></p>
+			</sec>
+		</sec>
+		<sec id="additional-information">
+			<title>Additional Information</title>
+			<sec id="data-accessibility">
+				<title>Data Accessibility</title>
+				<p>Data is available via a ….</p>
+			</sec>
+			<sec id="author-contributions">
+				<title>Author Contributions</title>
+				<list list-type="bullet">
+					<list-item>
+						<p>Contributed to conception and design:</p>
+					</list-item>
+					<list-item>
+						<p>Contributed to acquisition of data:</p>
+					</list-item>
+					<list-item>
+						<p>Contributed to analysis and interpretation of data:</p>
+					</list-item>
+					<list-item>
+						<p>Drafted and/or revised the article:</p>
+					</list-item>
+					<list-item>
+						<p>Approved the submitted version for publication:</p>
+					</list-item>
+				</list>
+			</sec>
+			<sec id="conflict-of-interest">
+				<title>Conflict of Interest</title>
+				<p>Authors have no conflicts of interest to declare.</p>
+			</sec>
+			<sec id="funding">
+				<title>Funding</title>
+				<p>Support provided by ….</p>
+			</sec>
+			<sec id="acknowledgments">
+				<title>Acknowledgments</title>
+				<p>We thank everybody.</p>
+			</sec>
+			<sec id="preprint">
+				<title>Preprint</title>
+				<p>The pre-publication version of this manuscript can be found on
     SportRxiv (DOI: XXXXXXXXXX).</p>
-    <p></p>
-  </sec>
-</sec>
-<sec id="references">
-  <title>References</title>
-</sec>
-</body>
-<back>
-<ref-list>
-  <ref id="ref-CreativeTag1">
-    <mixed-citation>Somebody, A. M., &amp; Person, K. (2015). An
-    Article. <italic>Journal Title</italic>, <italic>1:2</italic>,
+				<p></p>
+			</sec>
+		</sec>
+		<sec id="references">
+			<title>References</title>
+		</sec>
+	</body>
+	<back>
+		<ref-list>
+			<ref id="ref-CreativeTag1">
+				<mixed-citation>Somebody, A. M., &amp; Person, K. (2015). An
+    Article. 
+					<italic>Journal Title</italic>, 
+					<italic>1:2</italic>,
     10–12.
-    <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.XXXX/XXXXXXX">https://doi.org/10.XXXX/XXXXXXX</ext-link></mixed-citation>
-  </ref>
-</ref-list>
-</back>
+    
+					<ext-link ext-link-type="uri" xlink:href="https://doi.org/10.XXXX/XXXXXXX">https://doi.org/10.XXXX/XXXXXXX</ext-link>
+				</mixed-citation>
+			</ref>
+		</ref-list>
+	</back>
 </article>

@@ -1,20 +1,20 @@
 ---
 title: Some Title
 author:
-  - given-name: Jane Doe
+  - name: Jane Doe
     url: https://example.com
     orcid: 0000-0000-0000-0000
-    affiliations: [some-inst, some-uni]
+    affiliations:
+      - id: some-inst
+        name: Institute for Cool Things
+        url: https://example.com
+      - id: some-uni
+        name: University of Awesome Research
+        url: https://example.com
     email: fake@fake.edu
-  - given-name: John Doe
-    affiliations: some-inst
-affiliations:
-  - id: some-inst
-    name: Institute for Cool Things
-    url: https://example.com
-  - id: some-uni
-    name: University of Awesome Research
-    url: https://example.com
+  - name: John Doe
+    affiliations:
+      - ref: some-inst
 doi: "10.51224/XXXXXXXXX"
 journal-editor: "Sam Somebody"
 article_type: Research
@@ -27,8 +27,6 @@ format:
   cik-html: default
   cik-pdf: default
   cik-jats: default
-  jats_articleauthoring: default
-issn: 100843
 bibliography: refs.json
 always_allow_html: true
 self-contained-math: true
@@ -103,14 +101,14 @@ $$
 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.
 
 
-::: {.cell hash='template2_cache/jats/fig1pdf_b467578b080d1e313f7b8ece50c08c00'}
+::: {.cell hash='template2_cache/html/fig1pdf_e5881c54f0ddb8a741b3aced3434e17b'}
+
+:::
+
+::: {.cell hash='template2_cache/html/fig1html_8e53ac5fcff8b5914c67346b6d726741'}
 ::: {.cell-output-display}
-![Figure 1: Somtimes greek in captions as well $\beta$ but make sure to use double backslash](STORK_overlay_blk.pdf){fig-pos='H' width=100%}
+![Figure 1: Somtimes greek in captions as well $\beta$ but make sure to use double backslash](STORK_overlay_black.png){fig-pos='H' width=100%}
 :::
-:::
-
-::: {.cell hash='template2_cache/jats/fig1html_cb8461c98674095c1580ca90c59db870'}
-
 :::
 
 
@@ -119,7 +117,7 @@ In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum fe
 \newpage
 
 
-::: {.cell hash='template2_cache/jats/unnamed-chunk-1_f6581d1a46638519f41d420c6e5ef2e6'}
+::: {.cell hash='template2_cache/html/unnamed-chunk-1_c3eef27ace89ae10eefe01022a590872'}
 ::: {.cell-output-display}
 
 `````{=html}
@@ -156,7 +154,7 @@ In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum fe
 :::
 :::
 
-::: {.cell hash='template2_cache/jats/unnamed-chunk-2_31ff7dbc48badf061c1b7ec063ea92f5'}
+::: {.cell hash='template2_cache/html/unnamed-chunk-2_3eef883cd02fffeca1032ff8cc068005'}
 
 :::
 
