@@ -53,6 +53,7 @@ contributes:
       template: simplehtml.html
       number-sections: true
       toc: true
+      toc-depth: 1
       theme: minimal
       self-contained: false
       self-contained-math: true

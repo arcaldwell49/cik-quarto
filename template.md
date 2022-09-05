@@ -105,14 +105,14 @@ $$
 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.
 
 
-::: {.cell hash='template_cache/pdf/fig1pdf_197f77240bf36e3acea4cb8c4b73ba0e'}
+::: {.cell hash='template_cache/html/fig1pdf_04d68bca3b17db24a04d416c67462d47'}
+
+:::
+
+::: {.cell hash='template_cache/html/fig1html_e3d39b5fc049126f23a9fccc0c3f221d'}
 ::: {.cell-output-display}
-![Figure 1: Somtimes greek in captions as well $\beta$ but make sure to use double backslash](STORK_overlay_blk.pdf){fig-pos='H' width=100%}
+![Figure 1: Somtimes greek in captions as well $\beta$ but make sure to use double backslash](https://raw.githubusercontent.com/arcaldwell49/cik-quarto/master/STORK_overlay_black.png){fig-pos='H' width=100%}
 :::
-:::
-
-::: {.cell hash='template_cache/pdf/fig1html_117bae06d83eebbebf6e6062606a611b'}
-
 :::
 
 
@@ -121,30 +121,46 @@ In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum fe
 \newpage
 
 
-::: {.cell hash='template_cache/pdf/unnamed-chunk-2_fb774113e000252f4fdf91d91ce80298'}
-
-:::
-
-::: {.cell hash='template_cache/pdf/unnamed-chunk-3_100bbf4929fb679df8334a0a85eb5cd5'}
+::: {.cell hash='template_cache/html/unnamed-chunk-2_e14d135880382511571fe4908a7c42ce'}
 ::: {.cell-output-display}
-\begin{ThreePartTable}
-\begin{TableNotes}
-\item \textit{Note.} 
-\item x = note 1; y = note 2.
-\end{TableNotes}
-\begin{longtable}[t]{lrr}
-\caption{\label{tab:unnamed-chunk-3}\textbf{Table 1}:Example.}\\
-\toprule
-  & MPG & Cylinder\\
-\midrule
-Mazda RX4 & 21 & 6\\
-\addlinespace
-Mazda RX4 Wag & 21 & 6\\
-\bottomrule
-\insertTableNotes
-\end{longtable}
-\end{ThreePartTable}
+
+`````{=html}
+<table class="table" style="margin-left: auto; margin-right: auto;border-bottom: 0;">
+<caption>
+<b>Table 1</b>: Example.</caption>
+ <thead>
+  <tr>
+   <th style="text-align:left;">   </th>
+   <th style="text-align:right;"> MPG </th>
+   <th style="text-align:right;"> Cylinder </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> Mazda RX4 </td>
+   <td style="text-align:right;"> 21 </td>
+   <td style="text-align:right;"> 6 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Mazda RX4 Wag </td>
+   <td style="text-align:right;"> 21 </td>
+   <td style="text-align:right;"> 6 </td>
+  </tr>
+</tbody>
+<tfoot>
+<tr><td style="padding: 0; " colspan="100%"><span style="font-style: italic;">Note.</span></td></tr>
+<tr><td style="padding: 0; " colspan="100%">
+<sup></sup> x = note 1; y = note 2.</td></tr>
+</tfoot>
+</table>
+
+`````
+
 :::
+:::
+
+::: {.cell hash='template_cache/html/unnamed-chunk-3_352ab7c46ec87ec4f1be83763a90166d'}
+
 :::
 
 
