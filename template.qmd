@@ -32,7 +32,7 @@ always_allow_html: true
 self-contained-math: true
 csl: apa7.csl
 publisher-id: CiK
-pdf-engine: lualatex
+pdf-engine: xelatex
 page-layout: article
 date: "`r Sys.Date()`"
 execute:

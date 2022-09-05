@@ -180,6 +180,7 @@ p.media {
 </head>
 <body>
 
+<!--
 <div class="sidenav">
   <a href="#abstract">Abstract</a>
   <a href="#introduction">Introduction</a>
@@ -189,6 +190,13 @@ p.media {
   <a href="#additional-information">Additional Information</a>
   <a href="#references">References</a>
 </div>
+-->
+$if(toc)$
+<div id="toc" class="sidenav">
+<button type="button" class="close">×</button>
+$toc$
+</div>
+$endif$
 
 <div class="main">
 
