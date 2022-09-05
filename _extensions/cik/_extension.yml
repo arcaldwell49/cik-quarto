@@ -14,7 +14,6 @@ contributes:
       knitr:
         opts_chunk:
           echo: false
-      template: simplehtml.html
     pdf:
       # define default configuration for the pdf version of your format
       documentclass: cik
@@ -51,6 +50,7 @@ contributes:
       keep_tex: true
     html:
       # define default configuration for the html version of your format
+      template: simplehtml.html
       number-sections: true
       toc: true
       theme: minimal

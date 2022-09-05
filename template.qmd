@@ -133,7 +133,7 @@ if(!knitr::is_html_output()){
 ```{r fig1html, fig.cap="Figure 1: Somtimes greek in captions as well $\\beta$ but make sure to use double backslash", out.width = "100%"}
 # Include for html
 if(knitr::is_html_output()){
-  knitr::include_graphics("STORK_overlay_black.png")
+  knitr::include_graphics("https://raw.githubusercontent.com/arcaldwell49/cik-quarto/master/STORK_overlay_black.png")
 }
 ```
 
