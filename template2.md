@@ -98,6 +98,10 @@ $$
 
 # Results
 
+
+
+
+
 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.
 
 
@@ -117,12 +121,13 @@ In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum fe
 \newpage
 
 
-::: {.cell hash='template2_cache/html/unnamed-chunk-1_c3eef27ace89ae10eefe01022a590872'}
+::: {.cell hash='template2_cache/html/unnamed-chunk-2_4df03111db672ccbdc655a4fb1c52453'}
 ::: {.cell-output-display}
 
 `````{=html}
 <table class="table" style="margin-left: auto; margin-right: auto;border-bottom: 0;">
-<caption>**Table 1**: Example.</caption>
+<caption>
+<b>Table 1</b>: Example.</caption>
  <thead>
   <tr>
    <th style="text-align:left;">   </th>
@@ -154,7 +159,7 @@ In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum fe
 :::
 :::
 
-::: {.cell hash='template2_cache/html/unnamed-chunk-2_3eef883cd02fffeca1032ff8cc068005'}
+::: {.cell hash='template2_cache/html/unnamed-chunk-3_9a474efa056826c3c080fd6f486a421f'}
 
 :::
 

@@ -54,7 +54,7 @@ contributes:
       number-sections: true
       toc: true
       theme: minimal
-      self-contained: true
+      self-contained: false
       self-contained-math: true
       link-citations: true
       always_allow_html: true

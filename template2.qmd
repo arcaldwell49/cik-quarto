@@ -108,6 +108,18 @@ $$
 
 # Results
 
+```{r}
+#| echo = FALSE,
+#| include = FALSE,
+#| results = 'asis',
+#| fig.cap = 'Another One'
+
+# Figures can also be displayed as URL links for HTML
+url <- "https://images.unsplash.com/photo-1563204996-8965f0a4a860?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80"
+knitr::include_graphics(url)
+
+```
+
 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.
 
 ```{r fig1pdf, fig.cap="Figure 1: Somtimes greek in captions as well $\\beta$ but make sure to use double backslash", out.width = "100%"}
@@ -132,7 +144,7 @@ In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum fe
 ```{r}
 if(knitr::is_latex_output() == FALSE){
     kableExtra::kable(mtcars[1:2, 1:2],
-    caption = "**Table 1**: Example.",
+    caption = "<b>Table 1</b>: Example.",
     col.names = c("MPG",
                   "Cylinder")
     ) %>%
