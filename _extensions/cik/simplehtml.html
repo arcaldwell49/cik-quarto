@@ -10,7 +10,9 @@ https://fonts.googleapis.com/css?family=Lato:400,400i,900,900i -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" type="text/css" />
 
 <style>
-
+ul {
+  list-style: none;
+}
   .flat-table {
     display: block;
     font-family: sans-serif;
@@ -65,7 +67,7 @@ img {
     max-width: 90%;
 }
 
-h1 { 
+h1 {
     display: block;
     font-size: 180%;
     margin-bottom: 0;
@@ -74,10 +76,10 @@ h1 {
     font-weight: bold;
 }
 
-h2 { 
+h2 {
     display: block;
     font-size: 130%;
-    color: #000; 
+    color: #000;
     margin-top: 1em;
     padding-top: 20px;
     margin-bottom: 0.40em;
@@ -86,7 +88,7 @@ h2 {
     font-weight: bold;
 }
 
-h3 { 
+h3 {
     display: block;
     color: #818181;
     font-size: 110%;
@@ -102,13 +104,13 @@ hr {
     height: 1px;
 }
 
-p.caption { 
+p.caption {
     text-align: center;
     display: block;
     font-size: 85%;
 }
 
-p.media { 
+p.media {
     text-align: center;
     display: block;
 }
@@ -216,20 +218,20 @@ $if(subtitle)$
 $endif$
 <br>
 
-<strong>Authors:</strong> 
+<strong>Authors:</strong>
 $for(author)$
 $author$ $for(author.affiliation)$$it.number$$sep$,$endfor$ $sep$,
 $endfor$
 
 <br>
 
-  <strong>Editor:</strong> 
-  $journal-editor$ 
-  
+  <strong>Editor:</strong>
+  $journal-editor$
+
   <br>
-  
-  <strong>DOI:</strong> 
-  
+
+  <strong>DOI:</strong>
+
 <a href="$doi$">$doi$</a>
  <br>
 
@@ -261,7 +263,7 @@ $endfor$
 $abstract$
 </p>
 </div>
-  
+
 
 $body$
 
@@ -269,7 +271,7 @@ $body$
 <br /><br /><br /><br />
 <p class="caption">Communications in Kinesiology</p>
 
-</div>     
+</div>
   <script>
     (function () {
 	var script = document.createElement("script");
@@ -281,4 +283,4 @@ $body$
 </body>
 
 
-</html> 
+</html>
