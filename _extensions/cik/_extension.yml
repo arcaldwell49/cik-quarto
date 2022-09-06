@@ -16,6 +16,8 @@ contributes:
           echo: false
     pdf:
       # define default configuration for the pdf version of your format
+      pdf-engine: xelatex
+      page-layout: article
       documentclass: cik
       colorlinks: true
       urlcolor: blue
@@ -29,6 +31,8 @@ contributes:
       biblio-config: false
       link-citations: true
       always_allow_html: true
+      bibliography: refs.json
+      csl: apa7.csl
       # Content to add in header that your format is using
       header-includes: |
         \usepackage{orcidlink}
@@ -46,7 +50,7 @@ contributes:
         # Add here the resources required for the PDF rendering
         - cik.cls
         - refs.json
-      csl: https://www.zotero.org/styles/apa
+      # csl: https://www.zotero.org/styles/apa
       keep_tex: true
     html:
       # define default configuration for the html version of your format
@@ -54,13 +58,14 @@ contributes:
       number-sections: true
       toc: true
       toc-depth: 1
-      theme: minimal
       self-contained: false
       self-contained-math: true
       link-citations: true
       always_allow_html: true
+      bibliography: refs.json
+      csl: apa7.csl
       # Use a CSL file to style (https://www.zotero.org/styles/)
-      csl: https://www.zotero.org/styles/apa    
+      # csl: https://www.zotero.org/styles/apa    
     jats:
       # define default configuration for the html version of your format
       self-contained: true
@@ -77,7 +82,7 @@ contributes:
           eissn: 2767-0732
           abbrev-title: Commun in Kinesiology
       # Use a CSL file to style (https://www.zotero.org/styles/)
-      csl: https://www.zotero.org/styles/apa   
+      # csl: https://www.zotero.org/styles/apa   
       lang: en
       cite-method: citeproc
       copyright:

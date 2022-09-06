@@ -26,15 +26,11 @@ abstract: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean comm
 format: 
   cik-html: default
   cik-pdf: default
-  cik-jats: default
 bibliography: refs.json
 always_allow_html: true
 self-contained-math: true
 csl: apa7.csl
-publisher-id: CiK
-pdf-engine: xelatex
-page-layout: article
-date: "2022-09-05"
+date: "2022-09-06"
 execute:
   keep-md: true
 editor: visual
