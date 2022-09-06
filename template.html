@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en-US" xml:lang="en-US"><head>
+<script src="template_files/libs/clipboard/clipboard.min.js"></script>
+<script src="template_files/libs/quarto-html/quarto.js"></script>
+<script src="template_files/libs/quarto-html/popper.min.js"></script>
+<script src="template_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="template_files/libs/quarto-html/anchor.min.js"></script>
+<link href="template_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="template_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="template_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="template_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="template_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light"><meta http-equiv="Content-Type" ontent="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,900,900i
+https://fonts.googleapis.com/css?family=Lato:400,400i,900,900i -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,900,900i" type="text/css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" type="text/css">
+
+<style>
+
+  .flat-table {
+    display: block;
+    font-family: sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-size: 115%;
+    overflow: auto;
+    width: auto;
+  }
+  thead {
+    background-color: rgba(207, 250, 209, 0.75);
+    color: black;
+    font-weight: normal;
+    padding: 20px 30px;
+    text-align: center;
+  }
+  tbody {
+    background-color: rgba(238, 238, 238, 0.75);
+    color: black;
+    padding: 20px 30px;
+  }
+
+body {
+    background-color:#fff;
+    font-family: "Lato", sans-serif;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    max-width: 75%;
+    margin: auto;
+}
+
+sub,sup {
+font-size: 75%;
+line-height: 0;
+position: relative;
+vertical-align: baseline
+}
+
+sub{
+bottom: -0.25em
+}
+
+sup{
+top: -0.5em
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #ddd;
+    padding: 5px;
+    max-width: 90%;
+}
+
+h1 { 
+    display: block;
+    font-size: 180%;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+}
+
+h2 { 
+    display: block;
+    font-size: 130%;
+    color: #000; 
+    margin-top: 1em;
+    padding-top: 20px;
+    margin-bottom: 0.40em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+}
+
+h3 { 
+    display: block;
+    color: #818181;
+    font-size: 110%;
+    margin: 0 0 0 0;
+    font-style: italic;
+}
+
+hr {
+    border: 0;
+    width: 80%;
+    color: #818181;
+    background-color: #818181;
+    height: 1px;
+}
+
+p.caption { 
+    text-align: center;
+    display: block;
+    font-size: 85%;
+}
+
+p.media { 
+    text-align: center;
+    display: block;
+}
+
+.abstract {
+    background-color: #f2f2f2;
+    border-left: 5px solid #818181;
+    padding: 5px 20px 5px 20px;
+}
+
+.sidenav {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    height: 100%;
+    overflow: hidden;
+    background-color: #fff;
+    padding-top: 0px;
+    border-right: 1px solid #818181;
+}
+
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 120%;
+    color: #818181;
+    display: block;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+-->
+.main {
+    margin-left: 200px; /* Same as the width of the sidenav */
+    padding: 0px 10px;
+    height: 100%;
+    overflow: visible;
+    -webkit-overflow-scrolling: touch;
+}
+
+
+/* On screens that are less than 700px wide, make the sidebar into a topbar */
+@media screen and (max-width: 700px) {
+  .sidenav {
+    width: 100%;
+    height: auto;
+    position: relative;
+    border-right: none;
+  }
+  .sidenav a {float: left;}
+  .main {margin-left: 0;}
+}
+
+/* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+@media screen and (max-width: 400px) {
+  .sidenav a {
+    text-align: center;
+    float: none;
+    border-right: none;
+  }
+}
+
+.hangingindent {
+  padding-left: 22px ;
+  text-indent: -22px ;
+}
+</style>
+
+</head>
+<body>
+
+<!--
+<div class="sidenav">
+  <a href="#abstract">Abstract</a>
+  <a href="#introduction">Introduction</a>
+  <a href="#methods">Methods</a>
+  <a href="#results">Results</a>
+  <a href="#discussion">Discussion</a>
+  <a href="#additional-information">Additional Information</a>
+  <a href="#references">References</a>
+</div>
+-->
+<div id="toc" class="sidenav">
+  <!--
+<button type="button" class="close">×</button>
+-->
+<ul>
+<li><a href="#introduction" id="toc-introduction"> <span class="header-section-number">1</span> Introduction</a></li>
+<li><a href="#methods" id="toc-methods"> <span class="header-section-number">2</span> Methods</a></li>
+<li><a href="#results" id="toc-results"> <span class="header-section-number">3</span> Results</a></li>
+<li><a href="#discussion" id="toc-discussion"> <span class="header-section-number">4</span> Discussion</a></li>
+<li><a href="#additional-information" id="toc-additional-information"> <span class="header-section-number">5</span> Additional Information</a></li>
+<li><a href="#references" id="toc-references"> <span class="header-section-number">6</span> References</a></li>
+</ul>
+</div>
+
+<div class="main">
+
+
+<div class="fluid-row" id="header">
+
+
+<p style="text-align:center;"><i>Communications in Kinesiology</i></p>
+
+<h1 class="title">Some Title</h1>
+<br>
+
+<strong>Authors:</strong> 
+Jane Doe  ,
+John Doe  
+<br>
+
+  <strong>Editor:</strong> 
+  Sam Somebody 
+  
+  <br>
+  
+  <strong>DOI:</strong> 
+  
+<a href="10.51224/XXXXXXXXX">10.51224/XXXXXXXXX</a>
+ <br>
+
+
+<p class="date"><span class="glyphicon glyphicon-calendar"></span>Last Updated: September 6, 2022</p>
+
+</div>
+
+
+<!-- <p style="text-align:center;"><i>Communications in Kinesiology</i></p> -->
+
+
+
+
+
+<div id="abstract" class="section level2">
+<h2>Abstract</h2>
+<!-- background-color: #f2f2f2;
+    border-left: 5px solid #818181;
+    padding: 5px 20px 5px 20px;-->
+<!-- border:2px; border-style:solid; border-color:#BEE59E; padding: 1em; background-color:gray-->
+<!-- border-left: 5px solid #818181;
+    padding: 5px 20px 5px 20px;-->
+<p style="
+    background-color:rgba(207, 250, 209, 0.75);
+    border-left: 5px solid #818181;
+    padding: 5px 20px 5px 20px;
+    ">
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc
+</p>
+</div>
+  
+
+<section id="introduction" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Introduction</h1>
+<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa <span class="citation" data-cites="CreativeTag1">(<a href="#ref-CreativeTag1" role="doc-biblioref">Somebody &amp; Person, 2015</a>)</span>. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.</p>
+<p>Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc, quis gravida magna mi a libero. Fusce vulputate eleifend sapien.</p>
+<p>Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Nullam accumsan lorem in dui. Cras ultricies mi eu turpis hendrerit fringilla. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In ac dui quis mi consectetuer lacinia. Nam pretium turpis et arcu. Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Sed aliquam ultrices mauris. Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris. Praesent adipiscing. Phasellus ullamcorper ipsum rutrum nunc. Nunc nonummy metus. Vestibulum volutpat pretium libero. Cras id dui. Aenean ut eros et nisl sagittis vestibulum. Nullam nulla eros, ultricies sit amet, nonummy id, imperdiet feugiat, pede. Sed lectus. Donec mollis hendrerit risus. Phasellus nec sem in justo pellentesque facilisis. Etiam imperdiet imperdiet orci. Nunc nec neque. Phasellus leo dolor, tempus non, auctor et, hendrerit quis, nisi. Curabitur ligula sapien, tincidunt non, euismod vitae, posuere imperdiet, leo. Maecenas malesuada. Praesent congue erat at massa. Sed cursus turpis vitae tortor. Donec posuere vulputate arcu. Phasellus accumsan cursus velit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed aliquam, nisi quis porttitor congue, elit erat euismod orci, ac</p>
+<div style="page-break-after: always;"></div>
+</section>
+<section id="methods" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Methods</h1>
+<section id="greek" class="level2" data-number="2.1">
+<h2 data-number="2.1" data-anchor-id="greek"><span class="header-section-number">2.1</span> Greek</h2>
+<p>Many times greek letters/symbols need to be provided outside of math mode. So you may say <span class="math inline">\(\beta\)</span></p>
+</section>
+<section id="superscript" class="level2" data-number="2.2">
+<h2 data-number="2.2" data-anchor-id="superscript"><span class="header-section-number">2.2</span> Superscript</h2>
+<p>You can give Superscript<sup>1</sup> or Subscript<sub>2</sub></p>
+</section>
+<section id="quotes-and-block-quotes" class="level2" data-number="2.3">
+<h2 data-number="2.3" data-anchor-id="quotes-and-block-quotes"><span class="header-section-number">2.3</span> Quotes and Block Quotes</h2>
+<blockquote class="blockquote">
+<p>This can easily be done</p>
+<ul>
+<li>ME</li>
+</ul>
+</blockquote>
+</section>
+<section id="links" class="level2" data-number="2.4">
+<h2 data-number="2.4" data-anchor-id="links"><span class="header-section-number">2.4</span> Links</h2>
+<pre><code>A [linked phrase][id].</code></pre>
+<p>At the bottom of the document:</p>
+<pre><code>[id]: http://example.com/ "Title"</code></pre>
+</section>
+<section id="images" class="level2" data-number="2.5">
+<h2 data-number="2.5" data-anchor-id="images"><span class="header-section-number">2.5</span> Images</h2>
+<pre><code>![alt text][id]</code></pre>
+</section>
+<section id="math" class="level2" data-number="2.6">
+<h2 data-number="2.6" data-anchor-id="math"><span class="header-section-number">2.6</span> Math</h2>
+<p>Fortunately the math formulas do not differ too much for HTML and PDF documents. For inline math a single <code>$</code> is necessary while <code>$$</code> creates formula on its own line.</p>
+<p><span class="math display">\[
+BSIc \space (mg^2/mm^4) = ToD^2 \space (mg/cm^3/1000) \cdot ToA.tb^2 \space (mm^2) \space
+\]</span></p>
+<div style="page-break-after: always;"></div>
+</section>
+</section>
+<section id="results" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Results</h1>
+<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.</p>
+<div class="cell" data-hash="template_cache/html/fig1pdf_04d68bca3b17db24a04d416c67462d47">
+
+</div>
+<div class="cell" data-hash="template_cache/html/fig1html_e3d39b5fc049126f23a9fccc0c3f221d">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://raw.githubusercontent.com/arcaldwell49/cik-quarto/master/STORK_overlay_black.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<p></p><figcaption class="figure-caption">Figure 1: Somtimes greek in captions as well <span class="math inline">\(\beta\)</span> but make sure to use double backslash</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<p>In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar,</p>
+<div style="page-break-after: always;"></div>
+<div class="cell" data-hash="template_cache/html/unnamed-chunk-2_e14d135880382511571fe4908a7c42ce">
+<div class="cell-output-display">
+
+<table class="table" style="margin-left: auto; margin-right: auto;border-bottom: 0;">
+<caption>
+<b>Table 1</b>: Example.</caption>
+ <thead>
+  <tr>
+   <th style="text-align:left;">   </th>
+   <th style="text-align:right;"> MPG </th>
+   <th style="text-align:right;"> Cylinder </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> Mazda RX4 </td>
+   <td style="text-align:right;"> 21 </td>
+   <td style="text-align:right;"> 6 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Mazda RX4 Wag </td>
+   <td style="text-align:right;"> 21 </td>
+   <td style="text-align:right;"> 6 </td>
+  </tr>
+</tbody>
+<tfoot>
+<tr><td style="padding: 0; " colspan="100%"><span style="font-style: italic;">Note.</span></td></tr>
+<tr><td style="padding: 0; " colspan="100%">
+<sup></sup> x = note 1; y = note 2.</td></tr>
+</tfoot>
+</table>
+
+</div>
+</div>
+<div class="cell" data-hash="template_cache/html/unnamed-chunk-3_352ab7c46ec87ec4f1be83763a90166d">
+
+</div>
+</section>
+<section id="discussion" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Discussion</h1>
+<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.</p>
+<p>Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus.</p>
+<p>Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc, quis gravida magna mi a libero. Fusce vulputate eleifend sapien. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Nullam accumsan lorem in dui. Cras ultricies mi eu turpis hendrerit fringilla. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In ac dui quis mi consectetuer lacinia.</p>
+<p>Nam pretium turpis et arcu. Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Sed aliquam ultrices mauris. Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris. Praesent adipiscing. Phasellus ullamcorper ipsum rutrum nunc. Nunc nonummy metus. Vestibulum volutpat pretium libero. Cras id dui. Aenean ut eros et nisl sagittis vestibulum. Nullam nulla eros, ultricies sit amet, nonummy id, imperdiet feugiat, pede. Sed lectus. Donec mollis hendrerit risus. Phasellus nec sem in justo pellentesque facilisis. Etiam imperdiet imperdiet orci. Nunc nec neque. Phasellus leo dolor, tempus non, auctor et, hendrerit quis, nisi. Curabitur ligula sapien, tincidunt non, euismod vitae, posuere imperdiet, leo. Maecenas malesuada. Praesent congue erat at massa. Sed cursus turpis vitae tortor. Donec posuere vulputate arcu. Phasellus accumsan cursus velit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed aliquam, nisi quis porttitor congue, elit erat euismod orci, ac</p>
+<section id="conclusion" class="level2" data-number="4.1">
+<h2 data-number="4.1" data-anchor-id="conclusion"><span class="header-section-number">4.1</span> Conclusion</h2>
+<p>orem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a.</p>
+<div style="page-break-after: always;"></div>
+</section>
+</section>
+<section id="additional-information" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> Additional Information</h1>
+<section id="data-accessibility" class="level2" data-number="5.1">
+<h2 data-number="5.1" data-anchor-id="data-accessibility"><span class="header-section-number">5.1</span> Data Accessibility</h2>
+<p>Data is available via a ….</p>
+</section>
+<section id="author-contributions" class="level2" data-number="5.2">
+<h2 data-number="5.2" data-anchor-id="author-contributions"><span class="header-section-number">5.2</span> Author Contributions</h2>
+<ul>
+<li>Contributed to conception and design:</li>
+<li>Contributed to acquisition of data:</li>
+<li>Contributed to analysis and interpretation of data:</li>
+<li>Drafted and/or revised the article:</li>
+<li>Approved the submitted version for publication:</li>
+</ul>
+</section>
+<section id="conflict-of-interest" class="level2" data-number="5.3">
+<h2 data-number="5.3" data-anchor-id="conflict-of-interest"><span class="header-section-number">5.3</span> Conflict of Interest</h2>
+<p>Authors have no conflicts of interest to declare.</p>
+</section>
+<section id="funding" class="level2" data-number="5.4">
+<h2 data-number="5.4" data-anchor-id="funding"><span class="header-section-number">5.4</span> Funding</h2>
+<p>Support provided by ….</p>
+</section>
+<section id="acknowledgments" class="level2" data-number="5.5">
+<h2 data-number="5.5" data-anchor-id="acknowledgments"><span class="header-section-number">5.5</span> Acknowledgments</h2>
+<p>We thank everybody.</p>
+</section>
+<section id="preprint" class="level2" data-number="5.6">
+<h2 data-number="5.6" data-anchor-id="preprint"><span class="header-section-number">5.6</span> Preprint</h2>
+<p>The pre-publication version of this manuscript can be found on SportRxiv (DOI: XXXXXXXXXX).</p>
+<div style="page-break-after: always;"></div>
+</section>
+</section>
+<section id="references" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> References</h1>
+<!-- get citations json format using www.anystyle.io -->
+<div id="refs" class="references csl-bib-body hanging-indent" data-line-spacing="2" role="doc-bibliography">
+<div id="ref-CreativeTag1" class="csl-entry" role="doc-biblioentry">
+Somebody, A. M., &amp; Person, K. (2015). An Article. <em>Journal Title</em>, <em>1:2</em>, 10–12. <a href="https://doi.org/10.XXXX/XXXXXXX">https://doi.org/10.XXXX/XXXXXXX</a>
+</div>
+</div>
+</section>
+
+
+<br><br><br><br>
+<p class="caption">Communications in Kinesiology</p>
+
+</div>     
+  <script>
+    (function () {
+	var script = document.createElement("script");
+	script.type = "text/javascript";
+	script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+	document.getElementsByTagName("head")[0].appendChild(script);
+    })();
+  </script>
+
+
+
+ </body></html>

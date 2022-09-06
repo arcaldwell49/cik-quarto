@@ -14,6 +14,8 @@ contributes:
       knitr:
         opts_chunk:
           echo: false
+      execute:
+        keep_md: true
     pdf:
       # define default configuration for the pdf version of your format
       pdf-engine: xelatex

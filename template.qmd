@@ -26,8 +26,8 @@ abstract: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean comm
 format: 
   cik-html: default
   cik-pdf: default
-date: "`r Sys.Date()`"
 editor: visual
+date: "`r Sys.Date()`"
 ---
 
 ```{r setup, include=FALSE}
