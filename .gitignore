@@ -1,3 +1,9 @@
 .DS_Store
 template_cache/
 template_files/
+template.tex
+template.log
+template.html
+template.md
+template.pdf
+template.xml

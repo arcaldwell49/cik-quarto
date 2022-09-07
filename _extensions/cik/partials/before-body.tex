@@ -35,7 +35,9 @@ $endfor$
 \address{ \\ }
 %%%% Subject entries to be placed here %%%%
 \subject{
-$sci-subject$
+$for(sci-subject)$
+$sci-subject$$sep$,
+$endfor$
 }
 
 %%%% Keyword entries to be placed here %%%%
