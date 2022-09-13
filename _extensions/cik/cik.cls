@@ -1117,7 +1117,7 @@
 
 \def\supertitlefont{\fontfamily{\sfdefault}\fontseries{m}\fontshape{n}\fontsize{24}{26}\selectfont\raggedright}
 \def\titlefont{\fontfamily{\sfdefault}\fontseries{m}\fontshape{n}\fontsize{20}{22}\selectfont\raggedright\color{jobcolor}}
-\def\authorfont{\fontfamily{\sfdefault}\fontseries{m}\fontshape{n}\fontsize{11}{18}\selectfont\raggedright\color{jobcolor}}
+\def\authorfont{\fontfamily{\sfdefault}\fontseries{m}\fontshape{n}\fontsize{9}{13}\selectfont\raggedright\color{jobcolor}}
 \def\addressfont{\fontfamily{\sfdefault}\fontseries{m}\fontshape{n}\fontsize{11}{15}\selectfont\raggedright}
 \def\abstractfont{\fontfamily{\rmdefault}\fontseries{m}\fontshape{n}\fontsize{10}{15}\selectfont\parindent1em}
 \def\keywordfont{\fontfamily{\sfdefault}\fontseries{m}\fontshape{n}\fontsize{10}{15}\selectfont\raggedright\mathversion{bold}}
@@ -1152,7 +1152,7 @@
 %\newif\if@history@provided \@history@providedfalse
 
 \newcommand{\address}[1]{\gdef\@address{#1}}%
-
+\newcommand{\corrauthor}[2][]{\affil[#1]{Correspondence: #2}}
 \newbox\absbox
 \renewenvironment{abstract}{\global\setbox\absbox\vbox\bgroup\par\abstractfont\leftskip0pc\rightskip14.2pc\noindent\ignorespaces}{\par\egroup} %rightskip adds margin for abstract
 
@@ -1261,7 +1261,7 @@ at https://doi.org/\@doi\ or via http://\@jname.royalsocietypublishing.org.\par}
    ^{\mathsection}\or ^{\mathparagraph}\or \|\or **\or \dagger\dagger
    \or \ddagger\ddagger \else\@ctrerr\fi}}
 
-\def\correshead{Author for correspondence:}%
+\def\correshead{Correspondence:}%
 \def\citehead{DOI:}%
 \def\editorhead{Editor:}%
 \def\risenotehead{Editor's Note:}%
@@ -1327,7 +1327,7 @@ at https://doi.org/\@doi\ or via http://\@jname.royalsocietypublishing.org.\par}
 \vspace*{-5.5pc}
 \noindent\begin{minipage}[!t]{50mm}
 \hskip-1pc
-\vbox to 242mm{{\vskip68pt\includegraphics[width=55mm,scale=0.6]{cik_logo.pdf}\vskip10pt
+\vbox to 242mm{ { \vskip68pt\includegraphics[width=55mm,scale=1]{cik_logo.pdf}\vskip10pt
 %{\fontfamily{\sfdefault}\fontseries{m}\fontshape{n}\fontsize{13.5}{15}\selectfont\raggedright 
 %\textcolor{jobcolor}{storkjournals.org}}\vskip10pt
 \if@citearticle@provided

@@ -14,39 +14,84 @@ contributes:
       knitr:
         opts_chunk:
           echo: false
+      execute:
+        keep_md: true
     pdf:
       # define default configuration for the pdf version of your format
+      pdf-engine: xelatex
+      page-layout: article
       documentclass: cik
       colorlinks: true
       urlcolor: blue
-      fig-width: 6.5
-      fig-height: 4.5
+      keep-tex: true
+      cite-method: citeproc
+      #fig-width: 6.5
+      #fig-height: 4.5
       # This format use a bst file with natbib
       #biblio-style: te
-      cite-method: citeproc
       # Set this below (`biblio-config: false`) if your cls already load a bst file
-      #biblio-config: true
+      biblio-config: false
+      link-citations: true
+      always_allow_html: true
+      bibliography: refs.json
+      csl: apa7.csl
       # Content to add in header that your format is using
       header-includes: |
         \usepackage{orcidlink}
         \definecolor{mypink}{RGB}{219, 48, 122}
       template-partials:
         # Add here the partials your format is using
+        - "partials/doc-class.tex"
+        - "partials/before-body.tex"
+        - "partials/citations.tex"
+        - "partials/graphics.tex"
+        - "partials/tables.tex"
+        - "partials/tightlist.tex"
         - "partials/title.tex"
-        - "partials/_authors.tex"
       format-resources:
         # Add here the resources required for the PDF rendering
         - cik.cls
         - refs.json
-      csl: https://www.zotero.org/styles/apa
+      # csl: https://www.zotero.org/styles/apa
+      keep_tex: true
     html:
       # define default configuration for the html version of your format
+      template: simplehtml.html
       number-sections: true
       toc: true
-      theme: minimal
+      toc-depth: 1
+      self-contained: false
+      self-contained-math: true
+      link-citations: true
+      always_allow_html: true
+      bibliography: refs.json
+      csl: apa7.csl
+      # Use a CSL file to style (https://www.zotero.org/styles/)
+      # csl: https://www.zotero.org/styles/apa    
+    jats:
+      # define default configuration for the html version of your format
       self-contained: true
       self-contained-math: true
+      always_allow_html: true
+      link-citations: true
+      journal:
+          publisher-id: STORK
+          publisher-name: Society for Transparency, Openness, and Replication in Kinesiology
+          publisher-loc: Hayward, CA
+          #nlm-ta: PLoS Biol
+          #pmc: plosbiol
+          title: Communications in Kinesiology
+          eissn: 2767-0732
+          abbrev-title: Commun in Kinesiology
       # Use a CSL file to style (https://www.zotero.org/styles/)
-      csl: https://www.zotero.org/styles/apa      
+      # csl: https://www.zotero.org/styles/apa   
+      lang: en
+      cite-method: citeproc
+      copyright:
+          text: "This is an open-access article distributed under the terms of the Creative Commons Attribution License, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited."
+          type: open-access
+          link: http://creativecommons.org/licenses/by/4.0/
+
+      
 
 

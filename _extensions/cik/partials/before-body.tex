@@ -3,18 +3,90 @@ $--
 $-- %%%% TODO %%%%%
 $-- Customize is needed, otherwise remove this partials to use Quarto default one
 $-- %%%%%%%%%%%%%%%%
-$if(has-frontmatter)$
-\frontmatter
+\captionsetup[table]{labelformat=empty}
+\captionsetup[figure]{labelformat=empty}
+\raggedbottom
+
+%%%% Article title to be placed here
+\title{$title$}
+
+
+%\author{
+%$for(by-author)$
+% $it.name.literal$\textsuperscript{$it.number$}$sep$,
+%$endfor$
+%}
+
+$for(by-author)$
+  \author[$for(by-author.affiliations)$$it.number$$sep$,$endfor$$if(by-author.email)$,*$endif$]
+  {$by-author.name.literal$}
+$endfor$
+
+$for(by-affiliation)$
+\affil[$it.number$]{$it.name$}
+$endfor$
+
+$for(by-author)$
+$if(by-author.email)$
+  \corrauthor[*]{$by-author.email$}
 $endif$
-$if(title)$
-$if(beamer)$
-\frame{\titlepage}
-$else$
-\maketitle
+$endfor$
+
+\address{ \\ }
+%%%% Subject entries to be placed here %%%%
+\subject{
+$for(sci-subject)$
+$sci-subject$$sep$,
+$endfor$
+}
+
+%%%% Keyword entries to be placed here %%%%
+\keywords{
+$for(keywords)$
+$keywords$$sep$,
+$endfor$
+}
+
+%%%% Insert corresponding author and its email address}
+%\corres{
+%  $corresp_author_name$\\
+%{\footnotesize $corresp_author_email$}
+%}
+\inserttype{
+{\Large $article_type$}
+}
+
+\insertcite{
+  {$doi$}
+}
+
+$if(notetf)$
+  \risenote{
+  { $printnote$}
+  }
 $endif$
-$if(abstract)$
+
+\editor{
+  $journal-editor$
+}
+
+%%%% Abstract text to be placed here %%%%%%%%%%%%
 \begin{abstract}
 $abstract$
 \end{abstract}
-$endif$
-$endif$
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% Some pieces required from the pandoc template
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\providecommand{\EndFirstPage}{%
+}
+
+\definecolor{jobcolor}{cmyk}{0,0,0,.95}
+\definecolor{joblightcolor}{cmyk}{0,0,0,.95}
+\definecolor{abstractcolor}{RGB}{207, 250, 209}
+\definecolor{copyrightcolor}{RGB}{207, 250, 209}
+
+\maketitle
+
+\newpage

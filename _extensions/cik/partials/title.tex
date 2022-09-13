@@ -6,17 +6,4 @@ $-- %%%% TODO %%%%%
 $-- Customize is needed, like below for printing the authors. Otherwise remove this partials to use Quarto default one. 
 $-- %%%%%%%%%%%%%%%%
 
-$if(title)$
-\title{$title$$if(thanks)$\thanks{$thanks$}$endif$}
-$endif$
-$if(subtitle)$
-\usepackage{etoolbox}
-\makeatletter
-\providecommand{\subtitle}[1]{% add subtitle to \maketitle
-  \apptocmd{\@title}{\par {\large #1 \par}}{}{}
-}
-\makeatother
-\subtitle{$subtitle$}
-$endif$
-\author{${ by-author:_authors.tex()[\and ] }}
-\date{$date$}
+\usepackage{authblk}

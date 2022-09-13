@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en-US" xml:lang="en-US">
+<head>
+<meta http-equiv="Content-Type" ontent="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,900,900i
+https://fonts.googleapis.com/css?family=Lato:400,400i,900,900i -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,900,900i" type="text/css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" type="text/css" />
+
+<style>
+ul {
+  list-style: none;
+}
+  .flat-table {
+    display: block;
+    font-family: sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-size: 115%;
+    overflow: auto;
+    width: auto;
+  }
+  thead {
+    background-color: rgba(207, 250, 209, 0.75);
+    color: black;
+    font-weight: normal;
+    padding: 20px 30px;
+    text-align: center;
+  }
+  tbody {
+    background-color: rgba(238, 238, 238, 0.75);
+    color: black;
+    padding: 20px 30px;
+  }
+
+body {
+    background-color:#fff;
+    font-family: "Lato", sans-serif;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    max-width: 75%;
+    margin: auto;
+}
+
+sub,sup {
+font-size: 75%;
+line-height: 0;
+position: relative;
+vertical-align: baseline
+}
+
+sub{
+bottom: -0.25em
+}
+
+sup{
+top: -0.5em
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #ddd;
+    padding: 5px;
+    max-width: 90%;
+}
+
+h1 {
+    display: block;
+    font-size: 180%;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+}
+
+h2 {
+    display: block;
+    font-size: 130%;
+    color: #000;
+    margin-top: 1em;
+    padding-top: 20px;
+    margin-bottom: 0.40em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+}
+
+h3 {
+    display: block;
+    color: #818181;
+    font-size: 110%;
+    margin: 0 0 0 0;
+    font-style: italic;
+}
+
+hr {
+    border: 0;
+    width: 80%;
+    color: #818181;
+    background-color: #818181;
+    height: 1px;
+}
+
+p.caption {
+    text-align: center;
+    display: block;
+    font-size: 85%;
+}
+
+p.media {
+    text-align: center;
+    display: block;
+}
+
+.abstract {
+    background-color: #f2f2f2;
+    border-left: 5px solid #818181;
+    padding: 5px 20px 5px 20px;
+}
+
+.sidenav {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    height: 100%;
+    overflow: hidden;
+    background-color: #fff;
+    padding-top: 0px;
+    border-right: 1px solid #818181;
+}
+
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 120%;
+    color: #818181;
+    display: block;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+-->
+.main {
+    margin-left: 200px; /* Same as the width of the sidenav */
+    padding: 0px 10px;
+    height: 100%;
+    overflow: visible;
+    -webkit-overflow-scrolling: touch;
+}
+
+
+/* On screens that are less than 700px wide, make the sidebar into a topbar */
+@media screen and (max-width: 700px) {
+  .sidenav {
+    width: 100%;
+    height: auto;
+    position: relative;
+    border-right: none;
+  }
+  .sidenav a {float: left;}
+  .main {margin-left: 0;}
+}
+
+/* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+@media screen and (max-width: 400px) {
+  .sidenav a {
+    text-align: center;
+    float: none;
+    border-right: none;
+  }
+}
+
+.hangingindent {
+  padding-left: 22px ;
+  text-indent: -22px ;
+}
+</style>
+
+</head>
+<body>
+
+<!--
+<div class="sidenav">
+  <a href="#abstract">Abstract</a>
+  <a href="#introduction">Introduction</a>
+  <a href="#methods">Methods</a>
+  <a href="#results">Results</a>
+  <a href="#discussion">Discussion</a>
+  <a href="#additional-information">Additional Information</a>
+  <a href="#references">References</a>
+</div>
+-->
+$if(toc)$
+<div id="toc" class="sidenav">
+  <!--
+<button type="button" class="close">×</button>
+-->
+$toc$
+</div>
+$endif$
+
+<div class="main">
+
+
+<div class="fluid-row" id="header">
+
+
+<p style="text-align:center;"><i>Communications in Kinesiology</i></p>
+
+<h1 class="title">$title$</h1>
+$if(subtitle)$
+<h3 class="subtitle">$subtitle$</h3>
+$endif$
+<br>
+
+<strong>Authors:</strong>
+$for(author)$
+$author$$sep$,
+$endfor$
+
+<br>
+
+  <strong>Editor:</strong>
+  $journal-editor$
+
+  <br>
+
+  <strong>DOI:</strong>
+
+<a href="$doi$">$doi$</a>
+ <br>
+
+
+<p class="date"><span class="glyphicon glyphicon-calendar"></span>Last Updated: $date$</p>
+
+</div>
+
+
+<!-- <p style="text-align:center;"><i>Communications in Kinesiology</i></p> -->
+
+
+
+
+
+<div id="abstract" class="section level2">
+<h2>Abstract</h2>
+<!-- background-color: #f2f2f2;
+    border-left: 5px solid #818181;
+    padding: 5px 20px 5px 20px;-->
+<!-- border:2px; border-style:solid; border-color:#BEE59E; padding: 1em; background-color:gray-->
+<!-- border-left: 5px solid #818181;
+    padding: 5px 20px 5px 20px;-->
+<p style="
+    background-color:rgba(207, 250, 209, 0.75);
+    border-left: 5px solid #818181;
+    padding: 5px 20px 5px 20px;
+    ">
+$abstract$
+</p>
+</div>
+
+
+$body$
+
+
+<br /><br /><br /><br />
+<p class="caption">Communications in Kinesiology</p>
+
+</div>
+  <script>
+    (function () {
+	var script = document.createElement("script");
+	script.type = "text/javascript";
+	script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+	document.getElementsByTagName("head")[0].appendChild(script);
+    })();
+  </script>
+</body>
+
+
+</html>

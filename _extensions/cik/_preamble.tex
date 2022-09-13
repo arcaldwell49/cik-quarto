@@ -1,0 +1,26 @@
+% added above 1 
+
+$if(highlighting-macros)$
+$highlighting-macros$
+$endif$
+
+$if(lineno)$
+\usepackage{lineno}
+\linenumbers
+$endif$
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{authblk}
+
+$for(header-includes)$
+$header-includes$
+$endfor$
+
+%%%% *** Do not adjust lengths that control margins, column widths, etc. ***
+
+%%%%%%%%%%% Defining Enunciations  %%%%%%%%%%%
+\newtheorem{theorem}{\bf Theorem}[section]
+\newtheorem{condition}{\bf Condition}[section]
+\newtheorem{corollary}{\bf Corollary}[section]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

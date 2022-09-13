@@ -1,181 +1,228 @@
 ---
-title: "Demo aft format to use as template"
-format:
-  aft-pdf:
-    keep-tex: true  
-  aft-html: default
+title: Some Title
 author:
+  - name: Jane Doe
+    url: https://example.com
+    orcid: 0000-0000-0000-0000
+    affiliations:
+      - id: some-inst
+        name: Institute for Cool Things
+        url: https://example.com
+      - id: some-uni
+        name: University of Awesome Research
+        url: https://example.com
+    email: fake@fake.edu
   - name: John Doe
     affiliations:
-      - name: Dummy org
-        department: Cool Dep
-        address: Somewhere
-        city: Magic city
-        country: best one
-        postal-code: 9999
-      - Demo Journal
-    orcid: 0000-0000-0000-0000
-    email: JD@example.org
-    url: https://example.org/
-  - name: his friend
-    affiliations:
-      - Another Affiliation
-abstract: |
-  This document is only a demo explaining how to use the template.
-keywords: [template, demo]
-reference-section-title: References
-bibliography: refs.json
+      - ref: some-inst
+doi: "10.51224/XXXXXXXXX"
+journal-editor: "Sam Somebody"
+article_type: Research
+notetf: false
+printnote: "Something to say here by the editors. Good for RISE editions."
+sci-subject: [Subject1, Subject2]
+keywords: [key1, key2, key3]
+abstract: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc"
+format: 
+  cik-html: default
+  cik-pdf: default
+editor: visual
+date: "`r Sys.Date()`"
 ---
 
-## Introduction {#sec-intro}
-
-This is a dummy example only for the purpose to use this repo as a template starter for creating new formats.  For this `article-format-template` we call our dummy article `aft`. 
-
-This quarto extension format supports PDF and HTML outputs. `quarto-journals` is aiming at porting existing {{< latex >}} template from journals to be used with quarto. PDF format is what require the most work to fit the journals guideline, but Quarto offer a nice rendering for HTML output too. This demo format template only use basic HTML format without any customization for now.
-
-## About Quarto Extensions formats And Quarto Journals Article
-
-First, please get familiar with the following resources: 
-
-- [Creating Formats](https://quarto.org/docs/extensions/formats.html) in Quarto as part of the [Extensions](https://quarto.org/docs/extensions/) mechanism.
-- [Journals Articles](https://quarto.org/docs/journals/) for Quarto.
-
-## Structure of this repository
-
-Everything for the extensions is in `_extensions`. See Quarto doc for details. 
-
-- In `partials`, you'll find the `.tex` partials that can be used and should be removed or tweaked,s
-
-- Your extension can make shortcodes and lua filters available. This document shows the effect of the one provided in the `aft` format. 
-
-- `aft` format sets some defaults which are different from `pdf` or `html`, link setting links to URL in read inside PDF output.
-
-Source repository for this template format can found on [Github](https://github.com/quarto-journals/article-format-template)
-
-
-### `_extensions\aft` 
-
-In this folder you'll find everything that defines the extensions which could be installed using `quarto install extension` or be part of the template when using `quarto use template`
-
-Format Metadata
-  ~ This is in `_extension.yml` is where all the metadata about the format are defined so that Quarto knows what to use.
-  Adapt this file for you own template.
-
-Partials
-  ~ In `partials`, there are the `.tex` files that will be used as Pandoc's template. We provide here all the partials supported by Quarto and custom one for this format. Quarto allows to provide partials to ease the process of tweaking the default latex Pandoc's template and keeping it up to date.  
-    This template repo contains all the relevant partials that you can use with Quarto _as example_. We only tweaked `title.tex` to show the usage of a custom partials called `_custom.tex`.  
-    **Only keep the partials that you need to tweak for the format you are creating**
-
-    If you need to completely change the default template (i.g customizing partials is not enough), then you need to provide your own template to Pandoc based on [`template.tex`](https://github.com/quarto-dev/quarto-cli/blob/main/src/resources/formats/pdf/pandoc/template.tex) and also using partials or not. This can be provided using the `template` YAML key in `_extension.yml` for Quarto to use it. 
-
-    This is considered advanced configuration as it will be harder to maintain than only using partials but could be required for some specific format. Be aware that this may lead to loose some Pandoc or Quarto features tied to default `template.tex` content if you remove some specific parts.
-
-Lua Filters
-  ~ Most of the time, custom formats will need Lua filters to provide specific features like cross format supports or provides custom shortcodes through the Quarto extension mechanism. Those filters will be available to the user and could be used in the custom formats (according to `_extensions` metadata). 
-    We have provided two examples: 
-
-    - `color-text.lua`, a Lua filter used to add color to inline text for PDF and HTML outputs using the same Markdown syntax
-    - `shorcodes.lua`, a Lua filter which follow [Quarto custom shortcodes](https://quarto.org/docs/authoring/shortcodes.html#custom-shortcodes) guidelines to provide a `{{< LaTeX >}}` shortcode to nicely print LaTeX in PDF and HTML. 
-
-    **Remove or replace with your own Lua filters**
-
-Format resources
-
-  ~ Resources required by the format needs to be available. We have provided two examples: 
-
-    - `te.bst` is a biblio style file for demo. It has been downloaded from https://www.economics.utoronto.ca/osborne/latex/TEBST.HTM (http://econtheory.org/technical/te.bst) - Licence [LPPL](https://www.latex-project.org/lppl/)
-    - `aft.cls` is a dummy class file for this example format. It is a copy of official `article.cls`, the one provided in LaTeX installation (i.e at `kpsewhich article.cls`) and renamed as example (Licence LaTeX Project Public License)
-    - `custom.scss` is a style file to have a custom theme for our HTML format so that our Lua filter feature `color-tex.lua` works.
-
-    Those files are referenced within the `_extension.yml` to be used with our example format.
-
-    **Remove and replace with your own resources**
-
-`.quartoignore`
-
-  ~ Sometimes it is useful to have some files only needed for reference or for development. They should be available in the source repository but not downloaded to the user when `quarto use template` is used.
-
-    **Use `.quartoignore` to register such file and folder (one file or folder per line)**
-
-`style-guide` folder
-
-  ~ For `quarto-journals` format, use `style-guide` folder to include any documentation and resourced used for format creation, like a journal style guide or original `.tex` template. This folder is already added in `.quartoignore` in this example repo.
-
-    **Remove, rename or add to this folder**
-
-`template.qmd`
-
-  ~ This file is the template document that shows how to use the custom format. It will be downloaded with other resource by `quarto use template`, and even offered to be renamed if the name `template.qmd` is used. 
-
-    This file will usually use the custom format (here `aft-pdf` and `aft-html`) and show how to use the template. When you'll copy this template, you should be able to render this document to the demo format. 
-
-    **Adapt this file to provide a suitable template for your custom format**
-
-Other files
-
-  ~ Other files are needed by the template and are usually user provided - they are not part of the custom format. 
-
-    Here `bibliography.bib` is here to demo the usage of the bst file from the custom format.
-
-    **Remove this file and provide a suitable one for your template**
-
-{{< pagebreak >}}
-
-## Checklist: Creating a custom format
-
-Here is the checklist to help you know what to modify:
-
-- Read the resources mentioned at the top,
-- Use this template repo to create a new repository for your format (Click on "Use this template" to create new github repo)
-- Once you are acquainted with the content, remove the resources that are there only as example (see above)
-- Update README by replacing `aft` and `Article Format Template` mentions for your journal format
-- Keep only the template partials that you need to tweak, and add custom ones if needed
-- Add any Lua filters for shortcodes and other that would be useful to create the expected output format
-- Add any external resource your format will need, and that should be part of the extension format that will be downloaded,
-- Check `_extension.yml` is updated correctly
-- Modify the skeleton `template.qmd` to your format and add any required resources to be downloaded to user.
-- Check `.quartoignore` is updated which everything that should not be downloaded.
-- Publish a demo of you format to github pages of the repo by using `quarto publish` command 
-
-## Demo of some features found in this demo journal template
-
-### Shortcode demo {#sec-shortcode}
-
-PDF are rendered using {{< latex >}} but it is best if one can use a Markdown syntax for cross format support.
-
-`{{< latex >}}` used in source is a shortcode syntax where the shortcode is included in the extension folder `_extensions`
-
-### Code chunk {#sec-chunks}
-
-This format hide chunks by default as option has been set in `_extension.yml` file.
-
-```{r}
-#| prompt: true
-# Loading some data but this chunk won't be shown.
-data("quine", package = "MASS")
+```{r setup, include=FALSE}
+# To COMPILE RUN THE CODE BELOW
+# rmarkdown::render(<your-rmd-file.rmd>, output_format ="all")
+library(knitr)
+library(tidyverse)
+library(kableExtra)
+## Global options
+#options(max.print="75")
+opts_chunk$set(echo=FALSE,
+	             cache=TRUE,
+               prompt=FALSE,
+               tidy=TRUE,
+               comment=NA,
+               message=FALSE,
+               warning=FALSE,fig.pos = "H") #,fig.pos = "H", out.extra = ""
+#opts_knit$set(width=75)
 ```
 
-But you can set `echo` option to `true` locally in the chunk
+# Introduction
+
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa [@CreativeTag1]. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.
+
+Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc, quis gravida magna mi a libero. Fusce vulputate eleifend sapien.
+
+Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Nullam accumsan lorem in dui. Cras ultricies mi eu turpis hendrerit fringilla. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In ac dui quis mi consectetuer lacinia. Nam pretium turpis et arcu. Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Sed aliquam ultrices mauris. Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris. Praesent adipiscing. Phasellus ullamcorper ipsum rutrum nunc. Nunc nonummy metus. Vestibulum volutpat pretium libero. Cras id dui. Aenean ut eros et nisl sagittis vestibulum. Nullam nulla eros, ultricies sit amet, nonummy id, imperdiet feugiat, pede. Sed lectus. Donec mollis hendrerit risus. Phasellus nec sem in justo pellentesque facilisis. Etiam imperdiet imperdiet orci. Nunc nec neque. Phasellus leo dolor, tempus non, auctor et, hendrerit quis, nisi. Curabitur ligula sapien, tincidunt non, euismod vitae, posuere imperdiet, leo. Maecenas malesuada. Praesent congue erat at massa. Sed cursus turpis vitae tortor. Donec posuere vulputate arcu. Phasellus accumsan cursus velit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed aliquam, nisi quis porttitor congue, elit erat euismod orci, ac
+
+\newpage
+
+# Methods
+
+## Greek
+
+Many times greek letters/symbols need to be provided outside of math mode. So you may say $\beta$
+
+## Superscript
+
+You can give Superscript^1^ or Subscript~2~
+
+## Quotes and Block Quotes
+
+> This can easily be done
+>
+> -   ME
+
+## Links
+
+    A [linked phrase][id].
+
+At the bottom of the document:
+
+    [id]: http://example.com/ "Title"
+
+## Images
+
+    ![alt text][id]
+
+## Math
+
+Fortunately the math formulas do not differ too much for HTML and PDF documents. For inline math a single `$` is necessary while `$$` creates formula on its own line.
+
+$$
+BSIc \space (mg^2/mm^4) = ToD^2 \space (mg/cm^3/1000) \cdot ToA.tb^2 \space (mm^2) \space 
+$$
+
+\newpage
+
+# Results
 
 ```{r}
-#| echo: true
-m_pois <- glm(Days ~ (Eth + Sex + Age + Lrn)^2, data = quine, family = poisson)
-summary(m_pois)
+#| echo = FALSE,
+#| include = FALSE,
+#| results = 'asis',
+#| fig.cap = 'Another One'
+
+# Figures can also be displayed as URL links for HTML
+url <- "https://images.unsplash.com/photo-1563204996-8965f0a4a860?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80"
+knitr::include_graphics(url)
+
 ```
 
-### Text color {#sec-summary}
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.
 
-Our format makes applying color on inline text possible using the `[content]{color=<name>}` syntax. Let's see an example.
+```{r fig1pdf, fig.cap="Figure 1: Somtimes greek in captions as well $\\beta$ but make sure to use double backslash", out.width = "100%"}
+if(!knitr::is_html_output()){
+  knitr::include_graphics("STORK_overlay_blk.pdf")
+}
+# Include for PDF
 
-Here we are using a special feature of our format which is the coloring because [pink is a **nice** color]{color=mypink}.
+```
 
-This is possible thanks to the Lua Filter included in the custom extension format.
+```{r fig1html, fig.cap="Figure 1: Somtimes greek in captions as well $\\beta$ but make sure to use double backslash", out.width = "100%"}
+# Include for html
+if(knitr::is_html_output()){
+  knitr::include_graphics("https://raw.githubusercontent.com/arcaldwell49/cik-quarto/master/STORK_overlay_black.png")
+}
+```
 
-### Using references {.unnumbered}
+In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar,
 
-I did not read this book [@CameronTrivedi2013] but it must be interesting. 
+\newpage
 
-Differences between `aft-html` and `aft-pdf`: 
+```{r}
+if(knitr::is_latex_output() == FALSE){
+    kableExtra::kable(mtcars[1:2, 1:2],
+    caption = "<b>Table 1</b>: Example.",
+    col.names = c("MPG",
+                  "Cylinder")
+    ) %>%
+  #landscape() %>%
+  #kable_styling(position = "left",
+  #              font_size = 11) %>%
+  #column_spec(1, width = "13em") %>% 
+  #column_spec(2, width = "22em") %>% 
+  kable_styling(full_width = T, position = "center") %>%
+  footnote(general = "x = note 1; y = note 2.",
+           general_title = "Note.",
+           threeparttable = TRUE)
+}
 
-* For the HTML format, we are using Pandoc citeproc to include the bibliography. Here `reference-section-title` controls the title for the chapter that will be used.
-* For the PDF format, `natbib` is used by default and the bibliography is included with a title by the LaTeX template. 
+```
+
+```{r}
+if(knitr::is_latex_output() == TRUE){
+  
+  kableExtra::kable(mtcars[1:2, 1:2],
+    longtable = TRUE,
+    booktabs = TRUE,
+    escape = TRUE,
+    linesep = "\\addlinespace",
+    caption = "\\textbf{Table 1}:Example.",
+    col.names = c("MPG",
+                  "Cylinder")
+    ) %>%
+  #landscape() %>%
+  #kable_styling(position = "left",
+  #              font_size = 11) %>%
+  #column_spec(1, width = "13em") %>% 
+  #column_spec(2, width = "22em") %>% 
+  footnote(general = "x = note 1; y = note 2.",
+           general_title = "Note.",
+           threeparttable = TRUE)
+}
+
+```
+
+# Discussion
+
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.
+
+Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus.
+
+Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc, quis gravida magna mi a libero. Fusce vulputate eleifend sapien. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Nullam accumsan lorem in dui. Cras ultricies mi eu turpis hendrerit fringilla. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In ac dui quis mi consectetuer lacinia.
+
+Nam pretium turpis et arcu. Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Sed aliquam ultrices mauris. Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris. Praesent adipiscing. Phasellus ullamcorper ipsum rutrum nunc. Nunc nonummy metus. Vestibulum volutpat pretium libero. Cras id dui. Aenean ut eros et nisl sagittis vestibulum. Nullam nulla eros, ultricies sit amet, nonummy id, imperdiet feugiat, pede. Sed lectus. Donec mollis hendrerit risus. Phasellus nec sem in justo pellentesque facilisis. Etiam imperdiet imperdiet orci. Nunc nec neque. Phasellus leo dolor, tempus non, auctor et, hendrerit quis, nisi. Curabitur ligula sapien, tincidunt non, euismod vitae, posuere imperdiet, leo. Maecenas malesuada. Praesent congue erat at massa. Sed cursus turpis vitae tortor. Donec posuere vulputate arcu. Phasellus accumsan cursus velit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed aliquam, nisi quis porttitor congue, elit erat euismod orci, ac
+
+## Conclusion
+
+orem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a.
+
+\newpage
+
+# Additional Information
+
+## Data Accessibility
+
+Data is available via a ....
+
+## Author Contributions
+
+-   Contributed to conception and design:
+-   Contributed to acquisition of data:
+-   Contributed to analysis and interpretation of data:
+-   Drafted and/or revised the article:
+-   Approved the submitted version for publication:
+
+## Conflict of Interest
+
+Authors have no conflicts of interest to declare.
+
+## Funding
+
+Support provided by ....
+
+## Acknowledgments
+
+We thank everybody.
+
+## Preprint
+
+The pre-publication version of this manuscript can be found on SportRxiv (DOI: XXXXXXXXXX).
+
+\newpage
+
+# References
+
+<!-- get citations json format using www.anystyle.io -->
