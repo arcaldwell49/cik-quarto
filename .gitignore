@@ -7,3 +7,5 @@ template.html
 template.md
 template.pdf
 template.xml
+.Rproj.user
+*.Rproj
