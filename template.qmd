@@ -94,6 +94,10 @@ $$
 BSIc \space (mg^2/mm^4) = ToD^2 \space (mg/cm^3/1000) \cdot ToA.tb^2 \space (mm^2) \space 
 $$
 
+It may also be useful to have special characters such as $\le$ or $\ge$
+
+Also you can use HTML. ⋜
+
 \newpage
 
 # Results
