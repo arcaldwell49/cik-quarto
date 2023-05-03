@@ -57,6 +57,7 @@ contributes:
     html:
       # define default configuration for the html version of your format
       template: simplehtml.html
+      html-q-tags: true
       number-sections: true
       toc: true
       toc-depth: 1
