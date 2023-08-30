@@ -1,5 +1,6 @@
 ---
 title: Some Title
+subtitle: With a Subtitle
 author:
   - name: Jane Doe
     url: https://example.com
@@ -26,6 +27,7 @@ abstract: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean comm
 format: 
   cik-html: default
   cik-pdf: default
+bibliography: reflist.json
 editor: visual
 date: "`r Sys.Date()`"
 ---
@@ -76,15 +78,21 @@ You can give Superscript^1^ or Subscript~2~
 
 ## Links
 
-    A [linked phrase][id].
+```         
+A [linked phrase][id].
+```
 
 At the bottom of the document:
 
-    [id]: http://example.com/ "Title"
+```         
+[id]: http://example.com/ "Title"
+```
 
 ## Images
 
-    ![alt text][id]
+```         
+![alt text][id]
+```
 
 ## Math
 

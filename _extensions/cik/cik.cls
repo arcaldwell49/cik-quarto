@@ -529,6 +529,8 @@
   \vskip 60\p@
   \begin{center}%
     {\Large\mathversion{bold}\@title \par}%
+    \vskip 1em%
+    {\if@subtitle@provided{ \@subtitle \par}}%
     \vskip 3em%
     {\large
      \lineskip .75em%
@@ -593,6 +595,8 @@
   \begin{center}%
   \let \footnote \thanks
     {\LARGE\mathversion{bold} \@title \par}%
+    \vskip 0.5em%
+    {\if@subtitle@provided{ \@subtitle \par}}%
     \vskip 1.5em%
     {\large
       \lineskip .5em%
@@ -1144,6 +1148,7 @@
 \newif\if@others@provided \@others@providedfalse
 \newif\if@corres@provided \@corres@providedfalse
 \newif\if@risenote@provided \@risenote@providedfalse
+\newif\if@subtitle@provided \@subtitle@providedfalse
 \newif\if@editor@provided \@editor@providedfalse
 \newif\if@keywords@provided \@keywords@providedfalse
 \newif\if@subject@provided \@subject@providedfalse
@@ -1209,6 +1214,12 @@
      \global\@risenote@providedtrue%
      \gdef\@risenote{{\fontfamily{\sfdefault}\fontseries{b}\fontshape{n}\fontsize{10}{15}\selectfont\raggedright 
      \risenotehead}\par #1}}%
+     
+\def\@subtitle{}
+\newcommand\subtitle[1]{%
+     \global\@subtitle@providedtrue%
+     \gdef\@subtitle{{\fontfamily{\sfdefault}\fontseries{sl}\fontshape{n}\fontsize{10}{15}\selectfont
+     }\par #1}}%
      
 \def\@editor{}
 \newcommand\editor[1]{%
@@ -1402,6 +1413,8 @@ at https://doi.org/\@doi\ or via http://\@jname.royalsocietypublishing.org.\par}
 \vskip12pt
   \fi
       {\titlefont\mathversion{bold}\@title \par}%
+      % add subtitle here
+      {\if@subtitle@provided{\large \@subtitle \par}}%
 \vspace*{-11pt}
     \rule{90mm}{.5pt}\vspace*{2pt}
     {{\authorfont \@author\vphantom{$^1$}\par}}\vspace*{3pt}
