@@ -17,8 +17,12 @@ https://fonts.googleapis.com/css?family=Lato:400,400i,900,900i -->
 
 <style>
 ul {
-  list-style: none;
+  list-style: circle;
+    margin: 12px;
+  padding: 5px;
 }
+
+
   .flat-table {
     display: block;
     font-family: sans-serif;
@@ -127,36 +131,14 @@ p.media {
     padding: 5px 20px 5px 20px;
 }
 
-.sidenav {
-  height: 100%;
-  width: 200px;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  overflow-x: hidden;
-  padding-top: 20px;
-  background-color: #fff;
-  border-right: 1px solid #818181; 
-}
 
-.sidenav a {
-  padding: 6px 6px 6px 32px;
-  text-decoration: none;
-  font-size: 15px;
-  color: #818181;
-  display: block;
-}
 
-.sidenav a:hover {
-  color: #f1f1f1;
-}
 
-<!--
 .sidenav {
     height: 100%;
     width: 200px;
     position: fixed;
+    list-style: none;
     
     height: 100%;
     overflow: hidden;
@@ -167,6 +149,7 @@ p.media {
 
 .sidenav a {
     padding: 6px 8px 6px 16px;
+    list-style: none;
     text-decoration: none;
     font-size: 90%;
     color: #818181;
@@ -174,10 +157,10 @@ p.media {
 }
 
 .sidenav a:hover {
-    color: #f1f1f1;
+    color: #8B8000;
 } 
 
--->
+
 .main {
     margin-left: 200px; /* Same as the width of the sidenav */
     padding: 0px 10px;
@@ -230,10 +213,11 @@ p.media {
 -->
 $if(toc)$
 <div id="toc" class="sidenav">
+
   <!--
 <button type="button" class="close">×</button>
 -->
-$toc$
+$toc.html()$
 </div>
 $endif$
 

@@ -56,6 +56,8 @@ contributes:
       keep_tex: true
     html:
       # define default configuration for the html version of your format
+      format-links: false
+      toc-title: Contents
       template: simplehtml.html
       html-q-tags: true
       number-sections: true
