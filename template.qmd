@@ -28,7 +28,7 @@ format:
   cik-html: default
   cik-pdf: default
 bibliography: reflist.json
-editor: visual
+editor: source
 date: "`r Sys.Date()`"
 ---
 

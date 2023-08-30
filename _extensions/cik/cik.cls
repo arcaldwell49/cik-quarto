@@ -1414,7 +1414,7 @@ at https://doi.org/\@doi\ or via http://\@jname.royalsocietypublishing.org.\par}
   \fi
       {\titlefont\mathversion{bold}\@title \par}%
       % add subtitle here
-      {\if@subtitle@provided{\large \@subtitle \par}}%
+      {\if@subtitle@provided{\large \color{gray} \emph{ \textbf{  \@subtitle}} \par}}% 
 \vspace*{-11pt}
     \rule{90mm}{.5pt}\vspace*{2pt}
     {{\authorfont \@author\vphantom{$^1$}\par}}\vspace*{3pt}
