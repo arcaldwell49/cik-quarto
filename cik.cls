@@ -1390,7 +1390,7 @@ at https://doi.org/\@doi\ or via http://\@jname.royalsocietypublishing.org.\par}
   \else
    \fi
 \vfill
-\includegraphics[width=50mm,scale=0.45]{STORK_overlay_black.png}
+\includegraphics[width=50mm,scale=0.45]{STORK_overlay_blk.png}
 \if@others@provided
 \vskip1.5pc
 \@others
