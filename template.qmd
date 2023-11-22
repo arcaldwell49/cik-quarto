@@ -126,9 +126,9 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula 
 
 Figures can be placed using Quarto's native figure placement. You will need to have .pdf and .png files with the same name for this to work for PDF and HTML files, respectively.
 
-::: {}
-![Figure 1: Somtimes greek in captions as well $beta$. Taken from recent publication.](fig_1)
-:::
+
+![Figure 1: Somtimes greek in captions as well $beta$. Taken from recent publication.](fig_1){out-width=100%}
+
 
 \newpage
 
