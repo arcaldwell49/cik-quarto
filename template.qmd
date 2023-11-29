@@ -1,5 +1,6 @@
 ---
 title: Some Title
+subtitle: With a Subtitle
 author:
   - name: Jane Doe
     url: https://example.com
@@ -25,8 +26,10 @@ keywords: [key1, key2, key3]
 abstract: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc"
 format: 
   cik-html: default
-  cik-pdf: default
-editor: visual
+  cik-pdf: 
+    fig-format: pdf
+bibliography: reflist.json
+editor: source
 date: "`r Sys.Date()`"
 ---
 
@@ -36,6 +39,7 @@ date: "`r Sys.Date()`"
 library(knitr)
 library(tidyverse)
 library(kableExtra)
+library(flextable)
 ## Global options
 #options(max.print="75")
 opts_chunk$set(echo=FALSE,
@@ -76,15 +80,21 @@ You can give Superscript^1^ or Subscript~2~
 
 ## Links
 
-    A [linked phrase][id].
+```         
+A [linked phrase][id].
+```
 
 At the bottom of the document:
 
-    [id]: http://example.com/ "Title"
+```         
+[id]: http://example.com/ "Title"
+```
 
 ## Images
 
-    ![alt text][id]
+```         
+![alt text][id]
+```
 
 ## Math
 
@@ -112,67 +122,65 @@ knitr::include_graphics(url)
 
 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.
 
-```{r fig1pdf, fig.cap="Figure 1: Somtimes greek in captions as well $\\beta$ but make sure to use double backslash", out.width = "100%"}
-if(!knitr::is_html_output()){
-  knitr::include_graphics("STORK_overlay_blk.pdf")
-}
-# Include for PDF
+## Figures
 
-```
+Figures can be placed using Quarto's native figure placement. You will need to have .pdf and .png files with the same name for this to work for PDF and HTML files, respectively. Reference using the figure name such as [Figure 1](#fig-1).
 
-```{r fig1html, fig.cap="Figure 1: Somtimes greek in captions as well $\\beta$ but make sure to use double backslash", out.width = "100%"}
-# Include for html
-if(knitr::is_html_output()){
-  knitr::include_graphics("https://raw.githubusercontent.com/arcaldwell49/cik-quarto/master/STORK_overlay_black.png")
-}
-```
-
-In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar,
+::: {#fig-1,layout-ncol="1"}
+![**Figure 1:** Somtimes greek in captions as well $beta$. Taken from recent publication.](fig_1){out-width=100%}
+:::
 
 \newpage
 
-```{r}
-if(knitr::is_latex_output() == FALSE){
-    kableExtra::kable(mtcars[1:2, 1:2],
-    caption = "<b>Table 1</b>: Example.",
-    col.names = c("MPG",
-                  "Cylinder")
-    ) %>%
-  #landscape() %>%
-  #kable_styling(position = "left",
-  #              font_size = 11) %>%
-  #column_spec(1, width = "13em") %>% 
-  #column_spec(2, width = "22em") %>% 
-  kable_styling(full_width = T, position = "center") %>%
-  footnote(general = "x = note 1; y = note 2.",
-           general_title = "Note.",
-           threeparttable = TRUE)
-}
+## Tables
 
-```
+Flextable can used to place custom tables. Below is a table that is from a publication in CiK.
 
 ```{r}
-if(knitr::is_latex_output() == TRUE){
-  
-  kableExtra::kable(mtcars[1:2, 1:2],
-    longtable = TRUE,
-    booktabs = TRUE,
-    escape = TRUE,
-    linesep = "\\addlinespace",
-    caption = "\\textbf{Table 1}:Example.",
-    col.names = c("MPG",
-                  "Cylinder")
-    ) %>%
-  #landscape() %>%
-  #kable_styling(position = "left",
-  #              font_size = 11) %>%
-  #column_spec(1, width = "13em") %>% 
-  #column_spec(2, width = "22em") %>% 
-  footnote(general = "x = note 1; y = note 2.",
-           general_title = "Note.",
-           threeparttable = TRUE)
-}
+#| tbl-cap: Table 1.  Test table
 
+# import data -----
+tab1 = readxl::read_xlsx(here::here("tables.xlsx"),
+                         sheet = "table1",
+                         na = "NA") %>%
+  mutate_if(is.numeric, round, 2)
+
+
+# use flextable to 
+table1 = tab1 %>%
+  as_grouped_data(groups = c("tabl")) %>%
+  flextable()  %>% 
+  set_header_labels(values = list(
+                      row = " ",
+                      tabl = "Model",
+                      `main1_(df1, df2)` = "(df1, df2)",
+                      `main2_(df1, df2)` = "(df1, df2)",
+                      `int_(df1, df2)` = "(df1, df2)",
+                      `main1_F-Value` = "F-value",
+                      `main2_F-Value` = "F-value",
+                      `int_F-Value` = "F-value"
+                    )
+  ) %>%
+  add_header_row(values = c("","Main Effect of Altitude", 
+                       "Main Effect of Condition",
+                       "Altitude x Condition Interaction"),
+    colwidths = c(2,2,2,2)) %>%
+  add_footer_lines(values = paste0("Note: Readers can see all the underlying code, ",
+                                   "including the standard ANOVA functions in the online repository. ",
+             "Df1 refers to the numerator degrees of freedom and df2 refers ",
+             "to the denominator degrees of freedom for the calculation of the F-statistic. ",
+             "REML = Restricted maximum likelihood estimation; ML = Maximum Likelihood estimation.")) |>
+  footnote( i = c(7,13), j = 2,
+            ref_symbols = "A",
+            value = as_paragraph("returns warning \"boundary (singular) fit: see help(\'isSingular\')\", correlations between random-effects approach 1, but there is no zero variance for every random effect. ")) %>%
+footnote( i = c(8,14), j = 2,
+          ref_symbols = "B",
+          value = as_paragraph("Leads to an error, \"Error: number of observations (=60) <= number of random effects (=60) for term (condition * altitude | subject); the random-effects parameters and the residual variance (or scale parameter) are probably unidentifiable\". Without replicates, this model is over-specified and cannot be fit to these data.")) %>%
+footnote( i = 11, j = 2,
+          ref_symbols = "C",
+          value = as_paragraph("returns warning \"boundary (singular) fit: see help('isSingular')\", the variance for (1|altitude) and (1|condition) both go to zero, effectively leaving this the same as Option A when fit using maximum likelihood.")) 
+
+table1 %>% theme_apa()
 ```
 
 # Discussion

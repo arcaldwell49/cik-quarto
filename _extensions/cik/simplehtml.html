@@ -10,7 +10,6 @@
 <!--<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-
 <!-- https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,900,900i
 https://fonts.googleapis.com/css?family=Lato:400,400i,900,900i -->
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,900,900i" type="text/css" />
@@ -18,13 +17,14 @@ https://fonts.googleapis.com/css?family=Lato:400,400i,900,900i -->
 
 <style>
 ul {
-  list-style: none;
+  list-style: circle;
+
 }
   .flat-table {
     display: block;
     font-family: sans-serif;
     -webkit-font-smoothing: antialiased;
-    font-size: 115%;
+    font-size: 70%;
     overflow: auto;
     width: auto;
   }
@@ -129,28 +129,55 @@ p.media {
 }
 
 .sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+  background-color: #fff;
+  border-right: 1px solid #818181; 
+}
+
+.sidenav a {
+  padding: 6px 6px 6px 32px;
+  text-decoration: none;
+  font-size: 15px;
+  color: #818181;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #D1B000;
+}
+
+<!--
+.sidenav {
     height: 100%;
     width: 200px;
     position: fixed;
-    z-index: 1;
+    margin-left: 10px;
     height: 100%;
     overflow: hidden;
     background-color: #fff;
     padding-top: 0px;
-    border-right: 1px solid #818181;
+    border-right: 1px solid #818181; 
 }
 
 .sidenav a {
     padding: 6px 8px 6px 16px;
     text-decoration: none;
-    font-size: 120%;
+    font-size: 90%;
     color: #818181;
     display: block;
 }
 
 .sidenav a:hover {
-    color: #f1f1f1;
-}
+    color: #D1B000;
+} 
+
 -->
 .main {
     margin-left: 200px; /* Same as the width of the sidenav */
@@ -162,12 +189,14 @@ p.media {
 
 
 /* On screens that are less than 700px wide, make the sidebar into a topbar */
+
 @media screen and (max-width: 700px) {
   .sidenav {
     width: 100%;
     height: auto;
     position: relative;
     border-right: none;
+    display: none;
   }
   .sidenav a {float: left;}
   .main {margin-left: 0;}
@@ -207,7 +236,7 @@ $if(toc)$
   <!--
 <button type="button" class="close">×</button>
 -->
-$toc$
+$toc.html()$
 </div>
 $endif$
 

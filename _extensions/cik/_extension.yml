@@ -19,6 +19,7 @@ contributes:
     pdf:
       # define default configuration for the pdf version of your format
       pdf-engine: xelatex
+      fig-format: pdf
       page-layout: article
       documentclass: cik
       colorlinks: true
@@ -33,7 +34,7 @@ contributes:
       biblio-config: false
       link-citations: true
       always_allow_html: true
-      bibliography: refs.json
+      bibliography: reflist.json
       csl: apa7.csl
       # Content to add in header that your format is using
       header-includes: |
@@ -51,21 +52,24 @@ contributes:
       format-resources:
         # Add here the resources required for the PDF rendering
         - cik.cls
-        - refs.json
+        - reflist.json
       # csl: https://www.zotero.org/styles/apa
       keep_tex: true
     html:
       # define default configuration for the html version of your format
+      fig-format: png
+      format-links: false
+      toc-title: Contents
       template: simplehtml.html
       html-q-tags: true
       number-sections: true
       toc: true
       toc-depth: 1
-      self-contained: false
+      self-contained: true
       self-contained-math: true
       link-citations: true
       always_allow_html: true
-      bibliography: refs.json
+      bibliography: reflist.json
       csl: apa7.csl
       # Use a CSL file to style (https://www.zotero.org/styles/)
       # csl: https://www.zotero.org/styles/apa    
