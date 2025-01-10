@@ -1570,10 +1570,15 @@ at https://doi.org/\@doi\ or via http://\@jname.royalsocietypublishing.org.\par}
 \def\disclaimer#1{{\vskip5.5pt\noindent \textcolor{jobcolor}{\fontsize{9}{11}\selectfont Disclaimer.}\fontsize{8}{11}\selectfont\enskip #1}}
 \def\conflict#1{{\vskip5.5pt\noindent \textcolor{jobcolor}{\fontsize{9}{11}\selectfont Conflict of interests.}\fontsize{8}{11}\selectfont\enskip #1}}
 
-\usepackage[sort&compress]{natbib}
-\def\NAT@def@citea{\def\@citea{\NAT@separator}}
-\bibpunct{[}{]}{,}{n}{}{,}
-\def\@biblabel#1{#1.}
+%\usepackage[sort&compress]{natbib}
+%\def\NAT@def@citea{\def\@citea{\NAT@separator}}
+%\bibpunct{[}{]}{,}{n}{}{,}
+%\def\@biblabel#1{#1.}
+% Change to:
+%\usepackage[sort&compress]{natbib}
+%\def\NAT@def@citea{\def\@citea{\NAT@separator}}
+%\bibpunct{}{}{,}{n}{}{,}  % Removed the [ ] here
+%\def\@biblabel#1{}
 
 \usepackage[bookmarksnumbered,raiselinks,breaklinks]{hyperref}
 \hypersetup{
