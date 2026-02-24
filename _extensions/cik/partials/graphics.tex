@@ -1,5 +1,22 @@
 $-- Provides image scaling and placement configuration.
 $--
-$-- %%%% TODO %%%%%
-$-- Customize is needed, otherwise remove this partials to use Quarto default one
-$-- %%%%%%%%%%%%%%%%
+$-- This partial provides the standard graphics configuration needed by
+$-- Pandoc/Quarto for figure handling in PDF output.
+$-- Note: The main graphics scaling (\maxwidth, \maxheight, \setkeys{Gin})
+$-- and \pandocbounded are defined in before-body.tex for this template
+$-- because they need to appear after \begin{document}.
+$--
+$-- If your Quarto version requires graphics config in the preamble,
+$-- uncomment the block below:
+$--
+$-- $if(graphics)$
+$-- \usepackage{graphicx}
+$-- \makeatletter
+$-- \newsavebox\pandoc@teleport
+$-- \newcommand\pandocbounded[1]{\sbox\pandoc@teleport{#1}%
+$--   \ifdim\wd\pandoc@teleport>\linewidth
+$--     \resizebox{\linewidth}{!}{\usebox\pandoc@teleport}%
+$--   \else
+$--     \usebox\pandoc@teleport%
+$--   \fi}
+$-- \makeatother
