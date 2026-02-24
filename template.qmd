@@ -3,15 +3,12 @@ title: Some Title
 subtitle: With a Subtitle
 author:
   - name: Jane Doe
-    url: https://example.com
     orcid: 0000-0000-0000-0000
     affiliations:
       - id: some-inst
         name: Institute for Cool Things
-        url: https://example.com
       - id: some-uni
         name: University of Awesome Research
-        url: https://example.com
     email: fake@fake.edu
   - name: John Doe
     affiliations:
@@ -126,9 +123,8 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula 
 
 Figures can be placed using Quarto's native figure placement. You will need to have .pdf and .png files with the same name for this to work for PDF and HTML files, respectively. Reference using the figure name such as [Figure 1](#fig-1).
 
-::: {#fig-1,layout-ncol="1"}
-![**Figure 1:** Somtimes greek in captions as well $beta$. Taken from recent publication.](fig_1){out-width=100%}
-:::
+![**Figure 1:** Sometimes greek in captions as well $\beta$](fig_1){#fig-1 fig-align="center" width=100%}
+
 
 \newpage
 
@@ -180,7 +176,7 @@ footnote( i = 11, j = 2,
           ref_symbols = "C",
           value = as_paragraph("returns warning \"boundary (singular) fit: see help('isSingular')\", the variance for (1|altitude) and (1|condition) both go to zero, effectively leaving this the same as Option A when fit using maximum likelihood.")) 
 
-table1 %>% theme_apa()
+table1 %>% theme_apa() %>% fontsize(size = 8, part = "all") %>% width(width = .7)
 ```
 
 # Discussion
