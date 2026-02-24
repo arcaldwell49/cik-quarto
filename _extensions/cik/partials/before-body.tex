@@ -1,10 +1,10 @@
 $-- Implements the frontmatter, title page, and abstract.
 $--
-$-- %%%% TODO %%%%%
-$-- Customize is needed, otherwise remove this partials to use Quarto default one
-$-- %%%%%%%%%%%%%%%%
-\captionsetup[table]{labelformat=empty}
-\captionsetup[figure]{labelformat=empty}
+$-- Fixed: Removed \captionsetup[figure]{labelformat=empty} and
+$-- \captionsetup[table]{labelformat=empty} which were suppressing
+$-- figure/table numbering in captions.
+$-- Added \pandocbounded definition required by Pandoc >= 3.4 / Quarto >= 1.6
+$--
 \raggedbottom
 
 %%%% Article title to be placed here
@@ -108,6 +108,8 @@ $if(graphics)$
 \makeatletter
 \def\fps@figure{htbp}
 \makeatother
+% Define \pandocbounded for Pandoc >= 3.4 / Quarto >= 1.6
+\providecommand{\pandocbounded}[1]{#1}
 $endif$
 
 %\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
@@ -115,3 +117,5 @@ $endif$
 \makeatletter
 \def\fps@figure{htbp}
 \makeatother
+% Ensure \pandocbounded is defined even outside the graphics conditional
+\providecommand{\pandocbounded}[1]{#1}
