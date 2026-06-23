@@ -7,6 +7,7 @@ contributes:
       # define below YAML configuration common to all formats
       filters:
         # You can include here Lua filters from your extension format 
+        - cite-as.lua
         - color-text.lua
       shortcodes:
         # You can include here Lua filters defining shortcodes from your extension
@@ -98,5 +99,4 @@ contributes:
           link: http://creativecommons.org/licenses/by/4.0/
 
       
-
 
