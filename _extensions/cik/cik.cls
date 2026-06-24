@@ -865,7 +865,6 @@
 \setlength\fboxsep{3\p@}
 \setlength\fboxrule{.4\p@}
 \renewcommand \theequation {\@arabic\c@equation}
-\numberwithin{equation}{section}
 \newcounter{figure}
 \renewcommand \thefigure {\@arabic\c@figure}
 \def\fps@figure{tbp}
