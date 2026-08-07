@@ -27,7 +27,7 @@ format:
     fig-format: pdf
 bibliography: reflist.json
 editor: source
-date: "`r Sys.Date()`"
+date: today
 ---
 
 ```{r setup, include=FALSE}
