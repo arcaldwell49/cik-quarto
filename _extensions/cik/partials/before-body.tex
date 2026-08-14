@@ -59,7 +59,11 @@ $endfor$
 }
 
 \insertcite{
+$if(cite-as)$
+  {$cite-as$}
+$elseif(doi)$
   {$doi$}
+$endif$
 }
 
 $if(notetf)$

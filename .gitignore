@@ -10,3 +10,14 @@ template.xml
 .Rproj.user
 *.Rproj
 nul
+
+# Local tool/runtime installs
+.quarto-cli/
+.venv/
+bin/quarto
+.Rprofile
+renv/
+renv.lock
+renv/library/
+renv/staging/
+renv/sandbox/

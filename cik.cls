@@ -1272,7 +1272,7 @@ at https://doi.org/\@doi\ or via http://\@jname.royalsocietypublishing.org.\par}
    \or \ddagger\ddagger \else\@ctrerr\fi}}
 
 \def\correshead{Correspondence:}%
-\def\citehead{DOI:}%
+\def\citehead{Cite as:}%
 \def\editorhead{Editor:}%
 \def\risenotehead{Editor's Note:}%
 
