@@ -291,13 +291,15 @@ $endfor$
 <!-- border:2px; border-style:solid; border-color:#BEE59E; padding: 1em; background-color:gray-->
 <!-- border-left: 5px solid #818181;
     padding: 5px 20px 5px 20px;-->
-<p style="
+<!-- div, not p: a multi-paragraph (structured) abstract renders as several <p> elements, and
+     a <p> cannot contain <p>, so the browser closed the styled box before the text. -->
+<div class="abstract-box" style="
     background-color:rgba(207, 250, 209, 0.75);
     border-left: 5px solid #818181;
     padding: 5px 20px 5px 20px;
     ">
 $abstract$
-</p>
+</div>
 </div>
 
 
